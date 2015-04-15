@@ -14,7 +14,7 @@ aof [OPTION]... FILENAME
 Mandatory arguments for the OPTION field
   -a, --allatori              checks for Allatori obfuscation
   -A, --all                   checks against all obfuscators
-  -h, --help                  prints this help file
+  -h, --help                  prints this help message
   -j, --jarg                  checks for jarg (Java Archive Grinder) obfuscation
   -k, --klassmaster           checks for Zelix KlassMaster obfuscation
   -p, --proguard              checks for Proguard obfuscation
