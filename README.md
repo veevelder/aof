@@ -1,6 +1,6 @@
 ## Android Obfuscation Fingerprinter
 
-A *nix tool that was written in Python. Android Obfuscation Fingerprinter (aof) is able to identifiy several obfuscation methods in any given Android application. The following is what obfuscation methods aof looks for:
+Android Obfuscation Fingerprinter (aof) is a *nix tool that was written in Python, that is able to identifiy several obfuscation methods in any given Android application. The following is what obfuscation methods aof looks for:
 
 * Source File IDX Obfuscation
 * Removal of the BuildConfig Class
