@@ -20,12 +20,12 @@ import re
 
 #print usage to screen
 def printUsage():
-	print "Usage: oaf [OPTION]... FILENAME"
+	print "Usage: aof [OPTION]... FILENAME"
 	print
 	print "Mandatory arguments for the OPTION field"
 	print "  -a, --allatori              checks for Allatori obfuscation"
 	print "  -A, --all                   checks against all obfuscators"
-	print "  -h, --help                  prints this help file"
+	print "  -h, --help                  prints this help message"
 	print "  -j, --jarg                  checks for jarg (Java Archive Grinder) obfuscation"
 	print "  -k, --klassmaster           checks for Zelix KlassMaster obfuscation"
 	print "  -p, --proguard              checks for Proguard obfuscation"
