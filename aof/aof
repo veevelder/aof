@@ -1,0 +1,603 @@
+#!/usr/bin/python
+
+#Matt Van Veldhuizen
+#2/20/15
+#aof.py
+#Android Obfuscated Fingerprinting
+#Opens Android apks exctracts the classes.dex bytecode
+#determines of the bytecode has been obfuscated with
+#any of the following Android Obfuscators
+#	1. Proguard
+#	2. jarg
+#	3. Zelix KlassMaster
+#	4. Allatori
+#returns the best guess as to which most likely obfuscated the apk
+
+
+import sys
+import zipfile
+import re
+
+#print usage to screen
+def printUsage():
+	print "Usage: oaf [OPTION]... FILENAME"
+	print
+	print "Mandatory arguments for the OPTION field"
+	print "  -a, --allatori              checks for Allatori obfuscation"
+	print "  -A, --all                   checks against all obfuscators"
+	print "  -h, --help                  prints this help file"
+	print "  -j, --jarg                  checks for jarg (Java Archive Grinder) obfuscation"
+	print "  -k, --klassmaster           checks for Zelix KlassMaster obfuscation"
+	print "  -p, --proguard              checks for Proguard obfuscation"
+	print "  -V, --verbose               prints what obfuscation was discovered"
+	sys.exit()
+
+#test apk magic number
+def testAPK(apk):
+	if not zipfile.is_zipfile(apk):
+		print "Not a Valid APK"
+		sys.exit()
+	else:
+		return True
+
+#test dex magic number
+def testDEX(dex):
+	magic = dex[:8]
+	if not magic.encode('hex') == "6465780a30333500":
+		print "Not a Valid classes.dex"
+		sys.exit()
+#converst the binary to integers in the hex format
+def rawToInt(raw):
+	return int(raw.encode('hex'), 16)
+
+#function to check for source file idx obfuscation
+#retruns true if all source file idx entries are set to -1
+#returns false if if source file idx entries are set to > 0
+def checkSourceFileIDX(dex):
+	#class definition size
+	size = rawToInt(dex[99]+dex[98]+dex[97]+dex[96])
+	#class definition offset
+	source = rawToInt(dex[103]+dex[102]+dex[101]+dex[100]) + 16
+	#for every entry in the class dinitions find the source file
+	#idx entry
+	for s in range(size):
+		#grab every 8 hex characers
+		if dex[source:source+4].encode('hex') != "ffffffff":
+			return False
+		#skip to the next class definition
+		source += 32
+	return True
+
+#checks to see if the BuildConfig Class is present
+#returns true if no BuildConfig class was found
+#returns false if BuildConfig class was found
+def checkBuildConfig(dex):
+	#string offset
+	soff = rawToInt(dex[63]+dex[62]+dex[61]+dex[60])
+	#string size
+	size = rawToInt(dex[59]+dex[58]+dex[57]+dex[56])
+	#for every entry in the strings sections
+	for s in range(size):
+		#the beginging of the string
+		part1 = rawToInt(dex[soff+1]+dex[soff])
+		#the beginging of the next string
+		part2 = rawToInt(dex[soff+5]+dex[soff+4])
+		#grab what was between the two parts and see if BuildConfig
+		#is present -1 = no match any other number means match
+		if dex[part1:part2].find("BuildConfig") != -1:
+			return False
+		#skip to the next string location
+		soff += 4
+	return True
+
+#checks for annotation obfuscation
+#returns true if annotations for all classes are 0
+#reutnrs false if annotations for all classes are anything but 0
+def checkAnnotations(dex):
+	#class definition size
+	size = rawToInt(dex[99]+dex[98]+dex[97]+dex[96])
+	#class definition offset
+	source = rawToInt(dex[103]+dex[102]+dex[101]+dex[100]) + 20
+	#for every entry in the annotation section
+	for s in range(size):
+		#grab every 8 hex characers
+		if dex[source:source+4].encode('hex') != "00000000":
+			return False
+		#skip to the next class definition
+		source += 32
+	return True
+
+#checks for debug information
+#returns true if no debug information was found
+#returns false if debug information was found
+def checkDebug(dex):
+	#map offset
+	moff = rawToInt(dex[55]+dex[54]+dex[53]+dex[52])
+	#loop until end of file
+	while True:
+		#look for the data section offset
+		if dex[moff:moff+2].encode('hex') == "0120":
+			data = rawToInt(dex[moff+11]+dex[moff+10]+dex[moff+9]+dex[moff+8])
+			break
+		#if empty is returned reached eof
+		if dex[moff:moff+2].encode('hex') == "":
+			break
+		#increment to next section
+		moff += 4
+	#debug offset
+	debug = rawToInt(dex[data+11]+dex[data+10]+dex[data+9]+dex[data+8])
+	#if debug offset is set to zero debug information has been removed
+	if debug == 0:
+		return True
+	else:
+		return False
+
+def checkClass(dex, obfuscator):
+	#string offset
+	soff = rawToInt(dex[63]+dex[62]+dex[61]+dex[60])
+	#string size
+	size = rawToInt(dex[59]+dex[58]+dex[57]+dex[56])
+	#for every entry in the strings sections
+	for s in range(size):
+		#the beginging of the string
+		part1 = rawToInt(dex[soff+1]+dex[soff])
+		#the beginging of the next string
+		part2 = rawToInt(dex[soff+5]+dex[soff+4])
+		if obfuscator == "allatori":
+			if ((re.search('L.*/[A-Z|a-z];', dex[part1:part2]) is not None) and
+			    (dex[part1:part2].find("Ljava/net/URL;") == -1) and
+			    (dex[part1:part2].find("Lcom/uaf/matt/testone/R;") == -1)):
+				return True
+		if obfuscator == "klassmaster":
+			if (re.search('L[a-z];', dex[part1:part2]) is not None):
+				return True
+		soff += 4
+	return False
+
+def checkVariable(dex, obfuscator):
+	#string offset
+	soff = rawToInt(dex[63]+dex[62]+dex[61]+dex[60])
+	#string size
+	size = rawToInt(dex[59]+dex[58]+dex[57]+dex[56])
+	count = 0
+	#for every entry in the strings sections
+	for s in range(size):
+		#the beginging of the string
+		part1 = rawToInt(dex[soff+1]+dex[soff])
+		#the beginging of the next string
+		part2 = rawToInt(dex[soff+5]+dex[soff+4])
+		if obfuscator == "allatori":
+			if re.search('^01[4-5][0-9a-fA-F].*00$', dex[part1:part2].encode('hex')) is not None:
+				count += 1
+		if (obfuscator == "klassmaster"):
+			if re.search('^01[6-7][0-9a-fA-F].*00$', dex[part1:part2].encode('hex')) is not None:
+				return True
+		if (obfuscator == "proguard") or (obfuscator == "jarg"):
+			if re.search('^01[6-7][0-9a-fA-F].*00$', dex[part1:part2].encode('hex')) is not None:
+				count += 1
+		soff += 4
+
+	if count > 5:
+		return True
+	else:
+		return False
+
+def checkPosLoc(dex, obfuscator):
+	count = 0
+	#class definition size
+	size = rawToInt(dex[99]+dex[98]+dex[97]+dex[96])
+	#class definition offset
+	source = rawToInt(dex[103]+dex[102]+dex[101]+dex[100]) + 24
+	#counting the number of methods
+	for s in range(size):
+		#grab every 8 hex characers
+		tmp = rawToInt(dex[source+3]+dex[source+2]+dex[source+1]+dex[source])
+		count += rawToInt(dex[tmp+2]) + rawToInt(dex[tmp+3])
+		#skip to the next class definition
+		source += 32
+
+	#data offset
+	doff = rawToInt(dex[111]+dex[110]+dex[109]+dex[108])
+	while True:
+		#debug_info_off if 0 then it has been removed
+		if(rawToInt(dex[doff+11]+dex[doff+10]+dex[doff+9]+dex[doff+8]) != 0):
+			return False
+		#tires_size
+		tsize = rawToInt(dex[doff+7]+dex[doff+6])
+		#insns_size
+		insize = rawToInt(dex[doff+15]+dex[doff+14]+dex[doff+13]+dex[doff+12])
+		#if insize is odd compesate for padding
+		if insize % 2 == 1:
+			insize += 1
+		#if exceptions compensate for end of code block
+		if tsize > 0:
+			if(obfuscator != "klassmaster"):
+				insize += 2 + tsize * 4
+			else:
+				insize += (tsize+1) * 4
+				count = 5
+		doff = (doff + 16) + (insize*2)
+		count -= 1
+		if count <= 0:
+			break
+	return True
+
+def checkStrEnc(dex):
+	#string offset
+	soff = rawToInt(dex[63]+dex[62]+dex[61]+dex[60])
+	#string size
+	size = rawToInt(dex[59]+dex[58]+dex[57]+dex[56])
+	#for every entry in the strings sections
+	count = 0
+	for s in range(size):
+		#the beginging of the string
+		part1 = rawToInt(dex[soff+1]+dex[soff])
+		#the beginging of the next string
+		part2 = rawToInt(dex[soff+5]+dex[soff+4])
+		#regex to find non printable characters in the strings
+		tmp = re.findall('[^\s!-~]', dex[part1:part2])
+		if (len(dex[part1:part2]) != 0) and len(tmp) > 2:
+			if float(len(tmp))/len(dex[part1:part2]) > .20:
+				count += 1
+		soff += 4
+	if count > 0:
+		return True
+	else:
+		return False
+
+#proguard obfuscation test fuction
+def testPRO(dex, v):
+	print "    Checking for Proguard Obfuscation"
+
+	#src is true if source_file_idx is -1
+	if checkSourceFileIDX(dex):
+		src = 1
+		vstr = "        Source File Obfuscation Found\n"
+	else:
+		src = 0
+		vstr = "        No Source File Obfuscation Found\n"
+
+	#bld is true if the BuildConfig class was not found
+	if checkBuildConfig(dex):
+		bld = 1
+		vstr += "        BuildConfig Class Not Found\n"
+	else:
+		bld = 0
+		vstr += "        BuildConfig Class Found\n"
+
+	#ann is true if annotations have been removed
+	if checkAnnotations(dex):
+		ann = 1
+		vstr += "        Annotation Obfuscation Found\n"
+	else:
+		ann = 0
+		vstr += "        No Annotation Obfuscation\n"
+
+	#dbg is true if positions have been removed
+	if checkDebug(dex):
+		dbg = 1
+		vstr += "        Debug Obfuscation Found\n"
+	else:
+		dbg = 0
+		vstr += "        No Debug Obfuscation\n"
+
+	#cls  is true if class obfuscation was found
+	if checkClass(dex, "proguard"):
+		cls = 0
+		vstr += "        Class Renaming Found\n"
+	else:
+		cls = 1
+		vstr += "        No Class Renaming Found\n"
+
+	#var is true if variables have been renamed to a lower case letter
+	if checkVariable(dex, "proguard"):
+		var = 0
+		vstr += "        Variable Renaming Found\n"
+	else:
+		var = 1
+		vstr += "        No Variable Renaming Found\n"
+
+	#pl is true if variables have been renamed to a lower case letter
+	if checkPosLoc(dex, "proguard"):
+		pl = 1
+		vstr += "        Positions and Locals Removed\n"
+	else:
+		pl = 0
+		vstr += "        Positions and Locals Found\n"
+
+	#ste is true if string encrpytion was found
+	if checkStrEnc(dex):
+		ste = 0
+		vstr += "        String Encryption Found\n"
+	else:
+		ste = 1
+		vstr += "        No String Encryption Found\n"
+
+	#if verbose printing is enabled
+	if v:
+		print vstr
+
+	return (((src + bld + ann + dbg + var + pl + cls + ste) / 8.0) * 100) - .01
+
+#Allatori obfuscation test fuction
+def testALLA(dex, v):
+	print "    Checking for Allatori Obfuscation"
+
+	#src is true if source_file_idx is -1
+	if checkSourceFileIDX(dex):
+		src = 0
+		vstr = "        Source File Obfuscation Found\n"
+	else:
+		src = 1
+		vstr = "        No Source File Obfuscation Found\n"
+
+	#bld is true if the BuildConfig class was not found
+	if checkBuildConfig(dex):
+		bld = 1
+		vstr += "        BuildConfig Class Not Found\n"
+	else:
+		bld = 0
+		vstr += "        BuildConfig Class Found\n"
+
+	#ann is true if annotations have been removed
+	if checkAnnotations(dex):
+		ann = 0
+		vstr += "        No Annotation Obfuscation\n"
+	else:
+		ann = 1
+		vstr += "        Annotation Obfuscation Found\n"
+
+	#dbg is true if positions have been removed
+	if checkDebug(dex):
+		dbg = 0
+		vstr += "        No Debug Obfuscation\n"
+	else:
+		dbg = 1
+		vstr += "        Debug Obfuscation Found\n"
+
+	#cls  is true if class obfuscation was found
+	if checkClass(dex, "allatori"):
+		cls = 1
+		vstr += "        Class Renaming Found\n"
+	else:
+		cls = 0
+		vstr += "        No Class Renaming Found\n"
+
+	#var is true if variables have been renamed to a lower case letter
+	if checkVariable(dex, "allatori"):
+		var = 1
+		vstr += "        Variable Renaming Found\n"
+	else:
+		var = 0
+		vstr += "        No Variable Renaming Found\n"
+
+	#pl is true if variables have been renamed to a lower case letter
+	if checkPosLoc(dex, "allatori"):
+		pl = 0
+		vstr += "        Positions and Locals Removed\n"
+	else:
+		pl = 1
+		vstr += "        Positions and Locals Found\n"
+
+	#ste is true if string encrpytion was found
+	if checkStrEnc(dex):
+		ste = 1
+		vstr += "        String Encryption Found\n"
+	else:
+		ste = 0
+		vstr += "        No String Encryption Found\n"
+
+	#if verbose printing is enabled
+	if v:
+		print vstr
+
+	return (((src + bld + ann + dbg + var + pl + cls + ste) / 8.0) * 100) - .01
+
+#KlassMaster obfuscation test fuction
+def testKLASS(dex, v):
+	print "    Checking for Zelix KlassMaster Obfuscation"
+
+	#src is true if source_file_idx is -1
+	if checkSourceFileIDX(dex):
+		src = 1
+		vstr = "        Source File Obfuscation Found\n"
+	else:
+		src = 0
+		vstr = "        No Source File Obfuscation Found\n"
+
+	#bld is true if the BuildConfig class was not found
+	if checkBuildConfig(dex):
+		bld = 1
+		vstr += "        BuildConfig Class Not Found\n"
+	else:
+		bld = 0
+		vstr += "        BuildConfig Class Found\n"
+
+	#ann is true if positions have been removed
+	if checkAnnotations(dex):
+		ann = 1
+		vstr += "        Annotation Obfuscation Found\n"
+	else:
+		ann = 0
+		vstr += "        No Annotation Obfuscation\n"
+
+	#dbg is true if positions have been removed
+	if checkDebug(dex):
+		dbg = 1
+		vstr += "        Debug Obfuscation Found\n"
+	else:
+		dbg = 0
+		vstr += "        No Debug Obfuscation\n"
+
+	#cls is true if all classes have been renamed
+	if checkClass(dex, "klassmaster"):
+		cls = 1
+		vstr += "        Class Renaming Found\n"
+	else:
+		cls = 0
+		vstr += "        No Class Renaming Found\n"
+
+	#var is true if variables have been renamed to a lower case letter
+	if checkVariable(dex, "klassmaster"):
+		var = 1
+		vstr += "        Variable Renaming Found\n"
+	else:
+		var = 0
+		vstr += "        No Variable Renaming Found\n"
+
+	#pl is true if postitions and locals have been removed
+	if checkPosLoc(dex, "klassmaster"):
+		pl = 1
+		vstr += "        Positions and Locals Removed\n"
+	else:
+		pl = 0
+		vstr += "        Positions and Locals Found\n"
+
+	#ste is true if string encrpytion was found
+	if checkStrEnc(dex):
+		ste = 1
+		vstr += "        String Encryption Found\n"
+	else:
+		ste = 0
+		vstr += "        No String Encryption Found\n"
+
+	#if verbose printing is enabled
+	if v:
+		print vstr
+
+	return (((src + bld + ann + dbg + var + pl + cls + ste) / 8.0) * 100) - .01
+
+#proguard obfuscation test fuction
+def testJARG(dex, v):
+	print "    Checking for jarg Obfuscation"
+
+	#src is true if source_file_idx is -1
+	if checkSourceFileIDX(dex):
+		src = 1
+		vstr = "        Source File Obfuscation Found\n"
+	else:
+		src = 0
+		vstr = "        No Source File Obfuscation Found\n"
+
+	#bld is true if the BuildConfig class was found
+	if checkBuildConfig(dex):
+		bld = 0
+		vstr += "        BuildConfig Class Not Found\n"
+	else:
+		bld = 1
+		vstr += "        BuildConfig Class Found\n"
+
+	#ann is true if annotations have been removed
+	if checkAnnotations(dex):
+		ann = 1
+		vstr += "        Annotation Obfuscation Found\n"
+	else:
+		ann = 0
+		vstr += "        No Annotation Obfuscation\n"
+
+	#dbg is true if positions have been removed
+	if checkDebug(dex):
+		dbg = 1
+		vstr += "        Debug Obfuscation Found\n"
+	else:
+		dbg = 0
+		vstr += "        No Debug Obfuscation\n"
+
+	if checkClass(dex, "jarg"):
+		cls = 0
+		vstr += "        Class Renaming Found\n"
+	else:
+		cls = 1
+		vstr += "        No Class Renaming Found\n"
+
+	#var is true if variables have been renamed to a lower case letter
+	if checkVariable(dex, "jarg"):
+		var = 0
+		vstr += "        Variable Renaming Found\n"
+	else:
+		var = 1
+		vstr += "        No Variable Renaming Found\n"
+
+	#pl is true postions and locals have been removed
+	if checkPosLoc(dex, "jarg"):
+		pl = 1
+		vstr += "        Positions and Locals Removed\n"
+	else:
+		pl = 0
+		vstr += "        Positions and Locals Found\n"
+
+	#ste is true if string encrpytion was found
+	if checkStrEnc(dex):
+		ste = 0
+		vstr += "        String Encryption Found\n"
+	else:
+		ste = 1
+		vstr += "        No String Encryption Found\n"
+
+	#if verbose printing is enabled
+	if v:
+		print vstr
+
+	return (((src + bld + ann + dbg + var + pl + cls + ste) / 8.0) * 100) - .01
+
+def main():
+	allatori = False #    allaori - check for allatori obfuscation
+	proguard = False #    proguard - check for proguard obfuscation
+	klass = False    #    klass - check for klassmaster obfuscation
+	jarg = False     #    jarg - check for jarg obfuscation
+	verbose = False  #    verbose - print detailed information about the obfuscation
+
+	#check the amount of command line arguments
+	if(len(sys.argv) < 3):
+		printUsage()
+	#loop over the command line arguments
+	for args in sys.argv[1:]:
+		#each OPTION must start with a "-"
+		if(args[0] == "-"):
+			#if the -h or --help flag was given
+			if(args == "-h" or args == "--help"):
+				printUsage()
+			#set allatori state to be true
+			elif(args == "-a" or args == "--allatori"):
+				allatori = True
+			#set jarg state to be true
+			elif(args == "-j" or args == "--jarg"):
+				jarg = True
+			#set klass state to be true
+			elif(args == "-k" or args == "--klassmaster"):
+				klass = True
+			#set proguard state to be true
+			elif(args == "-p" or args == "--proguard"):
+				proguard = True
+			#set verbose printing to be true
+			elif(args == "-V" or args == "--verbose"):
+				verbose = True
+			#set all states to be true
+			elif(args == "-A" or args == "--all"):
+				allatori = True
+				proguard = True
+				klass = True
+				jarg = True
+			else:
+				printUsage()
+		#check if FILENAME is an apk and checks for classes.dex
+		elif(testAPK(args)):
+			fname = args
+			apk = zipfile.ZipFile(fname,'r')
+			dex = apk.read('classes.dex')
+			testDEX(dex)
+		else:
+			printUsage()
+
+	if allatori:
+		print "        Matched " + str(testALLA(dex, verbose)) + "% of the possible obfuscations\n"
+	if jarg:
+		print "        Matched " + str(testJARG(dex, verbose)) + "% of the possible obfuscations\n"
+	if klass:
+		print "        Matched " + str(testKLASS(dex, verbose)) + "% of the possible obfuscations\n"
+	if proguard:
+		print "        Matched " + str(testPRO(dex, verbose)) + "% of the possible obfuscations\n"
+
+
+if __name__ == "__main__":
+	main()
