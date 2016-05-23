@@ -1,0 +1,459 @@
+\section{Android Obfuscation Fingerprints}
+\begin{obeylines}
+After generating an obfuscated application using each of the obfuscators, the resulting APK's were unpacked to access the Dalvik bytecode file, classes.dex. Once the the classes.dex files were extracted each was opened with dexdump. This provided a static disassembly of the obfuscated dexcode. Each of the resulting dexdump outputs was then compared against the unobfuscated version of the same Android application. All of these dexdump outputs are located in Appendix \ref{app:dexdump}. Any difference from the unobfuscated and obfuscated dexdump was considered to be a part of the obfuscator's fingerprint. The following fingerprints were found for each of the obfuscators.
+\subsection{Proguard Fingerprints}
+The first difference that was discovered between the obfuscated and unobfuscated files was the removal of the BuildConfig Class. Figure \ref{fig:p1} shows that the first class to be found in the obfuscated version was DisplayMathsActivity. No reference to BuildConfig was found in the obfuscated version.
+\begin{figure}[!ht]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 16
+access_flags        : 17 (0x0011)
+superclass_idx      : 46
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 10
+annotations_off     : 0 (0x000000)
+class_data_off      : 11630 (0x002d6e)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #<@\textcolor{red}{0}@>            -
+Class descriptor : <@\textcolor{blue}{'Lcom/uaf/matt/testone/}@>
+                    <@\textcolor{blue}{BuildConfig;'}@>
+Access flags     : 0x0011 (PUBLIC FINAL)
+Superclass       : 'Ljava/lang/Object;'
+Interfaces       -
+Static fields    -
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 15
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6515 (0x001973)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 3
+virtual_methods_size: 2
+
+Class #<@\textcolor{red}{0}@>            -
+Class descriptor  : <@\textcolor{blue}{'Lcom/uaf/matt/testone/}@>
+                     <@\textcolor{blue}{DisplayMathsActivity;'}@>
+Access flags      : 0x0001 (PUBLIC)
+Superclass        : 'Landroid/app/Activity;'
+Interfaces        -
+Static fields     -
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Output Showing the Class \#0.\label{fig:p1}}
+\end{figure}
+Secondly, the source\_file\_idx value was set to an invalid ID, and all annotation information was removed. The source\_file\_idx normally holds the index into the string\_ids list that would hold the name of the source file. An invalid ID is set to -1 \cite{chiossi}. If annotations have been removed from the file, the annotations\_off value would be set to 0. Otherwise there is no file offset to the location of where the annotations for that class occur. In addition, I discovered that Proguard renamed each of the variables. Proguard renamed each of the variables to a lower case letter in the alphabet. At the start of each class, Proguard restarted the variable names to the beginning of the alphabet. Figure \ref{fig:p2} shows a comparison between the obfuscated and unobfuscated application.
+
+The final difference between the obfuscated and unobfuscated files was that any reference to positions or locals was removed from the obfuscated version. Most of this information was to aid in debugging so its removal did not affect the application. Figure \ref{fig:p3} shows the difference between the unobfuscated and obfuscated outputs of the DisplayMathsActivity class.
+\begin{figure}[!ht]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+Class #1 header:
+class_ids           : 17
+access_flags        : 1 (0x0001)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{13}@>
+annotations_off     : <@\textcolor{blue}{6296 (0x001898)}@>
+
+Class #1            -
+Class descriptor  : 'Lcom/uaf/matt/testone/
+                     DisplayMathsActivity;'
+Access flags      : 0x0001 (PUBLIC)
+Superclass        : 'Landroid/app/Activity;'
+Interfaces        -
+Static fields     -
+#0            : (in Lcom/uaf/matt/testone/
+                 DisplayMathsActivity;)
+name          : <@\textcolor{green}{'fibCache'}@>
+type          : 'Ljava/util/ArrayList;'
+access        : 0x000a (PRIVATE STATIC)
+Instance fields   -
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 15
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{-1}@>
+annotations_off     : <@\textcolor{blue}{0 (0x000000)}@>
+
+Class #0            -
+Class descriptor  : 'Lcom/uaf/matt/testone/
+                     DisplayMathsActivity;'
+Access flags      : 0x0001 (PUBLIC)
+Superclass        : 'Landroid/app/Activity;'
+Interfaces        -
+Static fields     -
+#0            : (in Lcom/uaf/matt/testone/
+                 DisplayMathsActivity;)
+name          : <@\textcolor{green}{'a'}@>
+type          : 'Ljava/util/ArrayList;'
+access        : 0x000a (PRIVATE STATIC)
+Instance fields   -
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs Showing source\_file\_idx, annotations\_off, and Variable Renaming.\label{fig:p2}}
+\end{figure}
+\begin{figure}[!ht]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+catches       : (none)
+positions     :
+0x0000 line=47
+0x0003 line=48
+0x0008 line=50
+0x000c line=51
+0x0013 line=53
+0x0018 line=54
+0x001d line=55
+0x0037 line=57
+0x003a line=58
+locals        :
+0x000c - 0x003b reg=0 intent Landroid/content/Intent;
+0x0013 - 0x003b reg=1 number I
+0x0018 - 0x003b reg=2 textView Landroid/widget/TextView;
+0x0000 - 0x003b reg=5 this Lcom/uaf/matt/testone/DisplayMathsActivity;
+0x0000 - 0x003b reg=6 savedInstanceState Landroid/os/Bundle;
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+catches       : (none)
+positions     :
+locals        :
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs Showing the Removal of Positions and Locals Information.\label{fig:p3}}
+\end{figure}
+In summary, no BuildConfig Class was found, and all references to the source\_file\_idx were set to an invalid ID. The annotation\_off value was set to zero indicating that for every class, all the annotation information was removed. No positions or locals were defined for any of the classes, and every variable was renamed. The full dexdump of the Proguard obfuscation is located in Appendix \ref{app:dpa}.
+\subsection{Java Archive Grinder Fingerprints}
+The first set of differences between the obfuscated and unobfuscated files was that the source\_file\_idx value was set to an invalid ID, and that all annotation information was removed.  In addition, variables were renamed. Java Archive Grinder renamed each of the variables to a lower case letter in the alphabet. At the start of each class it restated the variable names to the beginning of the alphabet. Figure \ref{fig:j1} shows a comparison between the obfuscated and unobfuscated applications.
+\begin{figure}[!ht]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+Class #1 header:
+class_idx           : 17
+access_flags        : 1 (0x0001)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{13}@>
+annotations_off     : <@\textcolor{green}{6296 (0x001898)}@>
+
+Class #1            -
+Class descriptor  : 'Lcom/uaf/matt/testone/
+                     DisplayMathsActivity;'
+Access flags      : 0x0001 (PUBLIC)
+Superclass        : 'Landroid/app/Activity;'
+Interfaces        -
+Static fields     -
+#0            : (in Lcom/uaf/matt/testone/
+                 DisplayMathsActivity;)
+name          : <@\textcolor{blue}{'fibCache'}@>
+type          : 'Ljava/util/ArrayList;'
+access        : 0x000a (PRIVATE STATIC)
+Instance fields   -
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 16
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{-1}@>
+annotations_off     : <@\textcolor{green}{0 (0x000000)}@>
+
+Class #0            -
+Class descriptor  : 'Lcom/uaf/matt/testone/
+                     DisplayMathsActivity;'
+Access flags      : 0x0001 (PUBLIC)
+Superclass        : 'Landroid/app/Activity;'
+Interfaces        -
+Static fields     -
+#0            : (in Lcom/uaf/matt/testone/
+                 DisplayMathsActivity;)
+name          : <@\textcolor{blue}{'a'}@>
+type          : 'Ljava/util/ArrayList;'
+access        : 0x000a (PRIVATE STATIC)
+Instance fields   -
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs Showing source\_file\_idx, annotations\_off, Variable Renaming.\label{fig:j1}}
+\end{figure}
+Finally any reference to positions or locals was removed from the obfuscated version. Figure \ref{fig:j2} shows the difference between the unobfuscated and obfuscated outputs of the DisplayMathsActivity class.
+\begin{figure}[H]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+catches       : (none)
+positions     :
+0x0000 line=47
+0x0003 line=48
+0x0008 line=50
+0x000c line=51
+0x0013 line=53
+0x0018 line=54
+locals        :
+0x000c - 0x003b reg=0 intent Landroid/content/Intent;
+0x0013 - 0x003b reg=1 number I
+0x0018 - 0x003b reg=2 textView Landroid/widget/TextView;
+0x0000 - 0x003b reg=5 this Lcom/uaf/matt/testone/DisplayMathsActivity;
+0x0000 - 0x003b reg=6 savedInstanceState Landroid/os/Bundle;
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+catches       : (none)
+positions     :
+locals        :
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs Showing the Removal of Positions and Locals Information.\label{fig:j2}}
+\end{figure}
+In summary, all references to the source\_file\_idx were set to an invalid ID. The annotation\_off value was set to zero indicating that, for every class, all the annotation information was removed. No positions or locals were defined for any of the classes and every variable was renamed. The full dexdump of the Java Archive Grinder obfuscation is located in Appendix \ref{app:djarg}.
+\subsection{Zelix KlassMaster Fingerprints}
+The first difference between the obfuscated and unobfuscated files was that there was no reference to the BuildConfig Class. Figure \ref{fig:z1} shows that the first class that was found in the obfuscated version, was ‘La’. No reference to BuildConfig was found in the obfuscated version, possibly due to class renaming. Either way, BuildConfig was not found in the obfuscated version.
+\begin{figure}[H]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 16
+access_flags        : 17 (0x0011)
+superclass_idx      : 46
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 10
+annotations_off     : 0 (0x000000)
+class_data_off      : 11630 (0x002d6e)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #0            -
+Class descriptor : <@\textcolor{red}{'Lcom/uaf/matt/testone/}@>
+                    <@\textcolor{red}{BuildConfig;'}@>
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+Class #0 header:
+class_idx           : 2
+access_flags        : 0 (0x0000)
+superclass_idx      : 6
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 9619 (0x002593)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 2
+
+Class #0            -
+Class descriptor  : <@\textcolor{red}{'La;'}@>
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs for Class \#0.\label{fig:z1}}
+\end{figure}
+Secondly, the source\_file\_idx value was set to an invalid ID and that all annotation information was removed. In addition, each of the variables were renamed to a lower case letter in the alphabet. At the start of each class it restarted the variable names to the beginning of the alphabet. Figure \ref{fig:z2} shows the obfuscated version. Because of how it was obfuscated, it was impossible to find its unobfuscated counterpart. Additionally, any reference to positions or locals was removed from the obfuscated version.
+
+The next difference between the obfuscated and unobfuscated files was that control flow obfuscation was implemented on some of the classes. The example in Figure \ref{fig:z4} shows that a group of goto instructions were added to the end of the class.
+
+Finally, every string in the obfuscated version was encrypted, and there was a call to a function that would decrypt the string when it was going to be used. Figure \ref{fig:z5} shows the instructions for creating a new string, setting that new string to some encrypted set of characters, and then calling the function to decrypt the string.
+\begin{figure}[H]
+\begin{lstlisting}
+Class #1 header:
+class_idx           : 16
+access_flags        : 1 (0x0001)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{-1}@>
+annotations_off     : <@\textcolor{green}{0 (0x000000)}@>
+class_data_off      : 9637 (0x0025a5)
+static_fields_size  : 2
+instance_fields_size: 0
+direct_methods_size : 2
+virtual_methods_size: 2
+
+Class #1            -
+  Class descriptor  : 'Lb;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  #0              : (in Lb;)
+  name          : <@\textcolor{blue}{'a'}@>
+  type          : 'I'
+  access        : 0x0009 (PUBLIC STATIC)
+  #1              : (in Lb;)
+  name          : <@\textcolor{blue}{'z'}@>
+  type          : '[Ljava/lang/String;'
+  access        : 0x001a (PRIVATE STATIC FINAL)
+\end{lstlisting}
+\caption{Obfuscated dexdump Output Showing Class and Variable Renaming, source\_file\_idx and Annotation Obfuscation.\label{fig:z2}}
+\end{figure}
+\begin{figure}[!ht]
+\begin{lstlisting}
+000c10: 0e00                                   |0070: return-void
+000c12: 0176                                   |0071: move v6, v7
+000c14: <@\textcolor{blue}{28b0}@>                                   |0072: goto 0022 // -0050
+000c16: 1306 7d00                              |0073: const/16 v6, #int 125 // #7d
+000c1a: <@\textcolor{blue}{28ad}@>                                   |0075: goto 0022 // -0053
+000c1c: 0186                                   |0076: move v6, v8
+000c1e: <@\textcolor{blue}{28ab}@>                                   |0077: goto 0022 // -0055
+000c20: 1306 6d00                              |0078: const/16 v6, #int 109 // #6d
+000c24: <@\textcolor{blue}{28a8}@>                                   |007a: goto 0022 // -0058
+000c26: 0175                                   |007b: move v5, v7
+000c28: <@\textcolor{blue}{28d7}@>                                   |007c: goto 0053 // -0029
+000c2a: 1305 7d00                              |007d: const/16 v5, #int 125 // #7d
+000c2e: <@\textcolor{blue}{28d4}@>                                   |007f: goto 0053 // -002c
+000c30: 0185                                   |0080: move v5, v8
+000c32: <@\textcolor{blue}{28d2}@>                                   |0081: goto 0053 // -002e
+000c34: 1305 6d00                              |0082: const/16 v5, #int 109 // #6d
+000c38: <@\textcolor{blue}{28cf}@>                                   |0084: goto 0053 // -0031
+000c3a: 0132                                   |0085: move v2, v3
+000c3c: <@\textcolor{blue}{28aa}@>                                   |0086: goto 0030 // -0056
+000c3e: 0000                                   |0087: nop // spacer
+000c40: 0001 0400 0000 0000 5300 0000 5500 ... |0088: packed-switch-data (12 units)
+000c58: 0001 0400 0000 0000 2c00 0000 2e00 ... |0094: packed-switch-data (12 units)
+\end{lstlisting}
+\caption{Obfuscated dexdump Output Showing Flow Control Obfuscation.\label{fig:z4}}
+\end{figure}
+In summary, no reference to BuildConfig Class was found and all references to the source\_file\_idx were set to an invalid ID. The annotation\_off value was set to zero indicating that for every class all the annotation information was removed. No positions or locals were defined for any of the classes and every variable and class was renamed. Lastly, every string was encrypted. The full dexdump of the KlassMaster obfuscation is located in Appendix \ref{app:dzkm}.
+\begin{figure}[!ht]
+\begin{lstlisting}
+000b3c: 121c              |0006: const/4 v12, #int 1 // #1
+000b3e: 1203              |0007: const/4 v3, #int 0 // #0
+000b40: 1220              |0008: const/4 v0, #int 2 // #2
+000b42: <@\textcolor{red}{230a 3300}@>         |0009: new-array v10, v0, [Ljava/lang/String; // type@0033
+000b46: <@\textcolor{green}{1a00 4c00}@>         |000b: const-string v0, "[	D5RGx_h_`^RCnAXR~" // string@004c
+000b4a: <@\textcolor{blue}{6e10 4800 0000}@>    |000d: invoke-virtual {v0}, Ljava/lang/String;.toCharArray:()[C
+000b50: 0c00              |0010: move-result-object v0
+000b52: 2101              |0011: array-length v1, v0
+000b54: 36c1 7300         |0012: if-gt v1, v12, 0085 // +0073
+\end{lstlisting}
+\caption{Obfuscated dexdump Output Showing String Encryption.\label{fig:z5}}
+\end{figure}
+\subsection{Allatori Fingerprints}
+Allatori is a commercial product, and the version that was used to obfuscate the Android application was a trial version. Therefore, throughout the dexdump output some, but not all variable names would be set to ALLATORIxDEMO. This would not happen if the Android application was obfuscated with a licensed version of Allatori. Because of this, any identifier that is named ALLATORIxDEMO was not considered as part of the fingerprint.
+
+The first set of differences between the obfuscated and unobfuscated versions was the source\_file\_idx value was set to 140, a value not in the string\_ids array. All annotation information was also set to a value where no annotation information was located. In addition, the variables and classes were renamed. Allatori renamed each of the variables to a capital letter in the alphabet. Each class name started with ‘Lcom/package/’ followed by a capital letter. At the start of each class it restated the variable names to the beginning of the alphabet. In addition, all of the variable access types changed to become a synthetic of that type. Figure \ref{fig:a1} shows the obfuscated application.
+\begin{figure}[H]
+\begin{lstlisting}
+Class #1 header:
+class_idx           : 17
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : <@\textcolor{red}{140}@>
+annotations_off     : <@\textcolor{blue}{6548 (0x001994)}@>
+
+Class #1            -
+  Class descriptor  : <@\textcolor{green}{'Lcom/package/G;'}@>
+    Access flags      : 0x0011 (PUBLIC FINAL)
+    Superclass        : 'Ljava/lang/Object;'
+    Interfaces        -
+    Static fields     -
+    #0              : (in Lcom/package/G;)
+    name          : 'ALLATORIxDEMO'
+    type          : 'I'
+    access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/G;)
+    name          : <@\textcolor{green}{'H'}@>
+    type          : 'I'
+    access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+\end{lstlisting}
+\caption{Obfuscated dexdump Output Showing source\_file\_idx, annotation\_off, Variable and Class Name Obfuscation.\label{fig:a1}}
+\end{figure}
+Secondly, every string in the obfuscated version was encrypted, and there was a call to a function that would decrypt the string when it was going to be used. Figure \ref{fig:a2} shows the instructions for creating a new string, setting that new string to some encrypted set of characters, and then calling the function to decrypt the string.
+\begin{figure}[!ht]
+\begin{lstlisting}
+000f8a: <@\textcolor{red}{1a01 0a00}@>      |0001: const-string v1, "Bq" // string@000a
+000f8e: <@\textcolor{green}{7110 2000 0100}@> |0003: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/
+                              String;)Ljava/lang/String; // method@0020
+000f94: 0c01           |0006: move-result-object v1
+000f96: 7110 6b00 0100 |0007: invoke-static {v1}, Ljava/security/MessageDigest;
+                              .getInstance:(Ljava/lang/String;)
+                               Ljava/security/MessageDigest; // method@006b
+\end{lstlisting}
+\caption{Obfuscated dexdump Output Showing String Encryption.\label{fig:a2}}
+\end{figure}
+Finally, any reference to positions or locals was changed to different numbers, that no longer followed the bytecode specification, in the obfuscated version. Changing the numbers does not change how the application runs. In the unobfuscated version, the position line numbers were incremented by one, or some small amount, but always incrementing. Figure \ref{fig:a3} shows the difference between the unobfuscated and obfuscated outputs.
+\begin{figure}[!ht]
+\begin{multicols}{2}
+\center Unobfuscated
+\begin{lstlisting}
+catches       : 1
+0x0000 - 0x0038
+    Ljava/io/IOException; -> 0x0039
+positions     :
+0x0000 line=<@\textcolor{red}{19}@>
+0x0008 line=<@\textcolor{red}{20}@>
+0x000c line=<@\textcolor{red}{21}@>
+0x001a line=<@\textcolor{red}{22}@>
+0x001c line=<@\textcolor{red}{23}@>
+0x0022 line=<@\textcolor{red}{24}@>
+0x0039 line=<@\textcolor{red}{26}@>
+0x003a line=<@\textcolor{red}{27}@>
+0x003d line=<@\textcolor{red}{29}@>
+locals        :
+0x000c - 0x0039 reg=0 conn
+                Ljava/net/URLConnection;
+0x001c - 0x0039 reg=2
+                inputLine Ljava/lang/String;
+0x001a - 0x0039 reg=3
+                reader Ljava/io/BufferedReader;
+0x0008 - 0x0039 reg=4 url Ljava/net/URL;
+0x003a - 0x003d reg=1 e Ljava/io/IOException;
+0x0000 - 0x003f reg=8 this Lcom/uaf/matt/testone/getURLData;
+0x0000 - 0x003f reg=9 urls [Ljava/lang/String;
+\end{lstlisting}
+\columnbreak
+\center Obfuscated
+\begin{lstlisting}
+catches       : 1
+0x0000 - 0x0038
+    Ljava/io/IOException; -> 0x0039
+positions     :
+0x0000 line=<@\textcolor{red}{182}@>
+0x0008 line=<@\textcolor{red}{92}@>
+0x000c line=<@\textcolor{red}{42}@>
+0x001a line=<@\textcolor{red}{188}@>
+0x001c line=<@\textcolor{red}{70}@>
+0x0022 line=<@\textcolor{red}{44}@>
+0x0039 line=<@\textcolor{red}{28}@>
+0x003a line=<@\textcolor{red}{104}@>
+0x003d line=<@\textcolor{red}{122}@>
+locals        :
+0x0000 - 0x003f reg=5 this
+                Lcom/package/
+0x0000 - 0x003f reg=6 arg0
+         [Ljava/lang/String;
+\end{lstlisting}
+\end{multicols}
+\caption{Comparison Between dexdump Outputs Showing Positions Obfuscation and the Removal of Locals.\label{fig:a3}}
+\end{figure}
+In summary, all references to the source\_file\_idx was obfuscated. The annotation\_off value was obfuscated. Every variable and class were renamed, the variable access types were changed to become synthetic, and all line numbers were obfuscated. Lastly, every string was encrypted. The full dexdump of the Allatori obfuscation is located in Appendix \ref{app:da}.
+\end{obeylines}

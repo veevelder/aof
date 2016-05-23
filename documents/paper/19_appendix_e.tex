@@ -1,0 +1,747 @@
+\section{Android Obfuscation Fingerprinter Results}
+\label{app:results}
+\subsection{Simple Android Application}
+\label{app:saaresults}
+\subsubsection{Proguard Obfuscation}
+\label{app:pguardob}
+\begin{lstlisting}
+$ ./aof -A -V proguard.apk
+    Checking for Allatori Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 24.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 87.49% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	No String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 99.99% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Java Archive Grinder Obfuscation}
+\label{app:jargob}
+\begin{lstlisting}
+$ ./aof -A -V jarg.apk
+    Checking for Allatori Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 12.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 99.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	No String Encryption Found
+
+	Matched 49.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Removed
+	No String Encryption Found
+
+	Matched 87.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Zelix KlassMaster Obfuscation}
+\label{app:zkmob}
+\begin{lstlisting}
+$ ./aof -A -V klassmaster.apk
+    Checking for Allatori Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Removed
+	String Encryption Found
+
+	Matched 99.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 74.99% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Allatori Obfuscation}
+\label{app:allob}
+\begin{lstlisting}
+$ ./aof -A -V allatori.apk
+    Checking for Allatori Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 99.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 12.49% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 24.99% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsection{Google Play Store}
+\label{app:gpsresults}
+\subsubsection{Google Chrome \cite{chrome}}
+\label{app:gchrome}
+\begin{lstlisting}
+$ ./aof -A -V com.android.chrome.apk
+    Checking for Allatori Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 74.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Digitalchemy Calculator \cite{calculator}}
+\label{app:dcalc}
+\begin{lstlisting}
+./aof -A -V com.digitalchemy.calculator.freedecimal.apk
+    Checking for Allatori Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 49.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 49.99% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Facebook \cite{facebook}}
+\label{app:aface}
+\begin{lstlisting}
+$ ./aof -A -V com.facebook.katana.apk
+    Checking for Allatori Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 74.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	No Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	No Debug Obfuscation
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{LED Flashlight \cite{flashlight}}
+\label{app:lflash}
+\begin{lstlisting}
+$ ./aof -A -V com.surpax.ledflashlight.panel.apk
+    Checking for Allatori Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	Annotation Obfuscation Found
+	No Debug Obfuscation
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 49.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+	Source File Obfuscation Found
+	BuildConfig Class Not Found
+	No Annotation Obfuscation
+	Debug Obfuscation Found
+	No Class Renaming Found
+	No Variable Renaming Found
+	Positions and Locals Found
+	String Encryption Found
+
+	Matched 62.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Amazon Kindle \cite{akindle}}
+\label{app:amazon}
+\begin{lstlisting}
+$ ./aof -A -V com.amazon.kindle.apk
+    Checking for Allatori Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        Debug Obfuscation Found
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 87.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 12.49% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Google My Business \cite{gbis}}
+\label{app:gbusiness}
+\begin{lstlisting}
+$ ./aof -A -V com.google.android.apps.vega.apk
+    Checking for Allatori Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        Debug Obfuscation Found
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 87.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Instagram \cite{instagram}}
+\label{app:agram}
+\begin{lstlisting}
+$ ./aof -A -V com.instagram.android.apk
+    Checking for Allatori Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        Debug Obfuscation Found
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 74.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Netflix \cite{netflix}}
+\label{app:aflix}
+\begin{lstlisting}
+$ ./aof -A -V com.netflix.mediaclient.apk
+    Checking for Allatori Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        Debug Obfuscation Found
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 74.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Pandora Radio\cite{pandora}}
+\label{app:apandora}
+\begin{lstlisting}
+$ ./aof -A -V com.pandora.android.apk
+    Checking for Allatori Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        Debug Obfuscation Found
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 87.49% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 24.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        No Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 37.49% of the possible obfuscations
+\end{lstlisting}
+\newpage
+\subsubsection{Clash of Clans \cite{clans}}
+\label{app:cclans}
+\begin{lstlisting}
+$ ./aof -A -V com.supercell.clashofclans.apk
+    Checking for Allatori Obfuscation
+        Source File Obfuscation Found
+        BuildConfig Class Not Found
+        Annotation Obfuscation Found
+        No Debug Obfuscation
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 49.99% of the possible obfuscations
+
+    Checking for jarg Obfuscation
+        Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        Debug Obfuscation Found
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 49.99% of the possible obfuscations
+
+    Checking for Zelix KlassMaster Obfuscation
+        Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        Debug Obfuscation Found
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 49.99% of the possible obfuscations
+
+    Checking for Proguard Obfuscation
+        Source File Obfuscation Found
+        BuildConfig Class Not Found
+        No Annotation Obfuscation
+        Debug Obfuscation Found
+        No Class Renaming Found
+        No Variable Renaming Found
+        Positions and Locals Found
+        String Encryption Found
+
+        Matched 62.49% of the possible obfuscations
+\end{lstlisting}

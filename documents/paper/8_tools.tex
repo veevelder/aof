@@ -1,0 +1,63 @@
+\section{Tools}
+\subsection{Android Obfuscators}
+\subsubsection{Proguard}
+Proguard \cite{proguard} is an Open Source Java and Android obfuscation tool that can shrink, optimize, obfuscate and preverify Java classes. It comes with the Android SDK and comes preconfigured for most purposes. It can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Detect and remove unused classes, fields, methods and attributes. \item Optimize bytecode and remove unused instructions.
+\item Rename classes, fields and methods using short meaningless names.
+\item Preverify the processed code for Java 6 and higher.
+\end{itemize}
+\subsubsection{Java Archive Grinder}
+Java Archive Grinder \cite{ohuchi} is an Open Source Java optimizer, obfuscator, shrinker, and reducer. It can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Remove unused fields, methods, classes and interfaces as well as debug information.
+\item Rename fields, methods, classes and interfaces.
+\item Optimize Java bytecode, such as removing NOP instructions and compressing local variable slots.
+\end{itemize}
+\subsubsection{Zelix KlassMaster}
+Zelix KlassMaster \cite{zelix} is a commercial Java and Android bytecode obfuscator. It can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Rename methods, fields, and classes.
+\item Implement flow control, exception, and string obfuscation.
+\item Integrate with Apache Ant build system to work with Dalvik bytecode obfuscation.
+\end{itemize}
+\subsubsection{Allatori}
+Allatori \cite{allatori} is a commercial Java and Android Obfuscator where it can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Do name and flow control obfuscation.
+\item Obfuscate debug information as well as string encryption.
+\item Work with the Apache Ant build system to work with Dalvik bytecode obfuscation.
+\end{itemize}
+\subsection{Android Obfuscators Considered But Not Used}
+The following obfuscation applications were considered when doing this project, but in the course of examination they were discounted due to one or more factors that made their use impractical for this project. These obfuscators were considered due to their past popularity with Java obfuscation, and their stated ability to work properly when obfuscating Android applications.
+\subsubsection{ClassEncrypt}
+ClassEncrypt \cite{classencrypt} is an Open Source Java obfuscator that can encrypt class files to prevent malicious users from stealing the source code. This obfuscator was not used because every time it was executed, it produced empty Java class files, and gave no errors, even with different settings applied.
+\subsubsection{Java ByteCode Obfuscator}
+The Java ByteCode Obfuscator \cite{jbco} is Open Source Java bytecode obfuscator based on Soot's advanced typing and flow analysis framework to preform obfuscation. It can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Operate on Java class files, producing obfuscated Baf, Jasmin, or class files.
+\item Add dead-code switch statements, disobey constructor conventions, flow control obfuscation, and package local variables into bitfields.
+\item Rename class, method, field, or variable names.
+\end{itemize}
+This obfuscator was not used because it was not compatible with the Android bytecode, even when it was converted to Java bytecode before running the obfuscator. It required that a Main function be defined in order to properly obfuscate and Android does not use Main to start the application.
+\subsubsection{Java Optimize and Decompile Environment}
+The Java Optimize and Decompile Environment \cite{jode} is an Open Source Java decompiler and optimizer. It can:
+\begin{itemize}[leftmargin=*,labelindent=1cm]
+\item Rename class, method, field, and local names to shorter, obfuscated or unique names or according to a given translation table.
+\item Remove debugging information, dead code, and constant fields.
+\item Optimize local variable allocation.
+\end{itemize}
+This obfuscator was not used because every time it was run, it produced different exception errors, even when the same input was given and the same settings were applied.
+\subsection{Tools Used}
+\subsubsection{Apache Ant}
+Apache Ant \cite{apache} is a software tool for automating the software build process for Java and Android. It uses a set of XML files to describe the build process and its dependencies. Apache Ant was designed to be modular so that changing or adding in new steps in the build process is simple and efficient, usually called Ant Tasks. Several of the obfuscators mentioned, included Ant Tasks to be implemented when building the Android Application with their obfuscator.
+\subsubsection{dex2jar}
+The dex2jar tool \cite{dex2jar} is a Unix and Windows command line tool that can translate Dalvik bytecode to Java bytecode.
+\subsubsection{dexdump}
+The dexdump tool is a Unix command line tool that was bundled along with the Android SDK. The dexdump tool is a static disassembler for Dalvik bytecode. It provides information about the Android application by looking at the classes.dex file inside the APK.
+\subsubsection{jar2dex}
+The jar2dex tool \cite{dex2jar} is a Unix and Windows command line tool that can translate Java bytecode to Dalvik bytecode.
+\subsubsection{unzip}
+The unzip tool \cite{unzip} is a Unix command line tool that will list, test or extract files from ZIP archives.
+\subsubsection{xxd}
+The xxd tool \cite{xxd} is a Unix command line tool that creates a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form.

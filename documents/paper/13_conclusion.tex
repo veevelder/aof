@@ -1,0 +1,18 @@
+\section{Conclusion}
+\begin{obeylines}
+Using a simple Android application and building the application with each of the four obfuscation programs, Proguard, Java Archive Grinder, Zelix KlassMaster, and Allatori, it was possible to find distinct fingerprints for each obfuscator. I found that each of these obfuscators had similar obfuscation rules that ended with similar results. The fingerprints for each obfuscator are summarized here:
+
+Proguard's fingerprint included removing the BuildConfig Class, setting source\_file\_idx values to an invalid ID, removing annotations, positions, and locals, and renaming variables to lower case letters.
+
+Java Archive Grinder's fingerprint included setting source\_file\_idx values to an invalid ID, and removing annotations, positions, and locals from each of the classes.
+
+Zelix KlassMaster's fingerprint included removing the BuildConfig class, positions, and locals, renaming classes and variables to lower case letters, and encrypting all string literals.
+
+Allatori's fingerprint included changing the access type of classes, fields, and methods to a synthetic version, renaming classes, and variables with upper case letters. In addition, Allatori was able to change the source\_file\_idx, annotations\_off, positions, and locals to values that no longer correlate to the Dalvik bytecode standard.
+
+Proguard, Java Archive Grinder, and Zelix KlassMaster had similar results for a few of the obfuscations. For instance, they all renamed every variable to a lower case letter starting at the beginning of the alphabet. All three programs managed to remove all information from the locals and positions for each class. Even though there are similarities between each of the obfuscators, there was enough of a difference to be able to identify which obfuscator was used.
+
+When running the aof.py tool against Android applications from the Google Play Store, it was found that Google Chrome, Digitalchemy Calculator, Facebook, Amazon Kindle, Google My Business, Instagram, Netflix, and Pandora Radio all matched to the Allatori Obfuscator while the LED Flashlight matched to every obfuscator except Java Archive Grinder, and Clash of Clans matched to Proguard. These results show that most of the Android applications used obfuscation that is similar to what Allatori can do.
+
+The obfuscator fingerprints that were discovered could have been manually implemented instead of using one of the obfuscator programs. When a fingerprint was found, there was a chance that it was written by hand and would result in a false positive. This means that the Android Obfuscation Fingerprint Tool, will always return the best educated guess, or whatever obfuscator fingerprint was the most similar.
+\end{obeylines}

@@ -1,0 +1,51 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: res/layout/activity_display_web_page.xml
+SHA1-Digest: 71+AIyIBTvRm3ZkSZ2RrxLJyOl8=
+
+Name: res/menu/menu_display_maths.xml
+SHA1-Digest: W2dJiV/tuovq8FpnSYlo5vOON8A=
+
+Name: AndroidManifest.xml
+SHA1-Digest: HAxiOH0jPHBTzquy/ucrfMJpaz4=
+
+Name: res/drawable-xhdpi-v4/ic_action_search.png
+SHA1-Digest: kiRRurGfAZoV6Q+BzqfzaZQGRFU=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: RQ09RDJf3yWYEKYOavo2ED4Yaz0=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA1-Digest: I3MP0NXnINH3Gb4a/IxI+nMF2mw=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: UCzYT6RE8m1+z99KNVBkhnl38jY=
+
+Name: res/menu/menu_display_message.xml
+SHA1-Digest: W2dJiV/tuovq8FpnSYlo5vOON8A=
+
+Name: res/layout/activity_test_one.xml
+SHA1-Digest: JnOWX+JL4L0cStxLbaW5+pui0Vo=
+
+Name: res/menu/menu_display_web_page.xml
+SHA1-Digest: W2dJiV/tuovq8FpnSYlo5vOON8A=
+
+Name: res/layout/activity_display_maths.xml
+SHA1-Digest: 71+AIyIBTvRm3ZkSZ2RrxLJyOl8=
+
+Name: resources.arsc
+SHA1-Digest: dD9nS2WPvEtHv+dkHNqO2Qavskk=
+
+Name: res/menu/menu_test_one.xml
+SHA1-Digest: kH1RvxRkniQx0P7qUwjnvcL2jYs=
+
+Name: res/layout/activity_display_message.xml
+SHA1-Digest: 71+AIyIBTvRm3ZkSZ2RrxLJyOl8=
+
+Name: classes.dex
+SHA1-Digest: qqQO8hN5HDrz37qDALNZS8DJ45g=
+
+Name: res/menu/main_activity_actions.xml
+SHA1-Digest: gNouB4ADmRpnVYsP/V5R5aJ1ooU=
+

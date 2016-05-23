@@ -1,0 +1,1918 @@
+Processing 'classes.dex'...
+Opened 'classes.dex', DEX version '035'
+DEX file header:
+magic               : 'dex\n035\0'
+checksum            : 6706eb4a
+signature           : c695...7930
+file_size           : 10900
+header_size         : 112
+link_size           : 0
+link_off            : 0 (0x000000)
+string_ids_size     : 172
+string_ids_off      : 112 (0x000070)
+type_ids_size       : 69
+type_ids_off        : 800 (0x000320)
+proto_ids_size       : 59
+proto_ids_off        : 1076 (0x000434)
+field_ids_size      : 36
+field_ids_off       : 1784 (0x0006f8)
+method_ids_size     : 124
+method_ids_off      : 2072 (0x000818)
+class_defs_size     : 16
+class_defs_off      : 3064 (0x000bf8)
+data_size           : 7324
+data_off            : 3576 (0x000df8)
+
+Class #0 header:
+class_idx           : 16
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10292 (0x002834)
+static_fields_size  : 11
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #0            -
+  Class descriptor  : 'Lcom/package/E;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/E;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/E;)
+      name          : 'D'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #2              : (in Lcom/package/E;)
+      name          : 'H'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #3              : (in Lcom/package/E;)
+      name          : 'I'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #4              : (in Lcom/package/E;)
+      name          : 'J'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #5              : (in Lcom/package/E;)
+      name          : 'K'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #6              : (in Lcom/package/E;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #7              : (in Lcom/package/E;)
+      name          : 'f'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #8              : (in Lcom/package/E;)
+      name          : 'g'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #9              : (in Lcom/package/E;)
+      name          : 'i'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #10              : (in Lcom/package/E;)
+      name          : 'm'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/E;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000e14:                                        |[000e14] com.package.E.<init>:()V
+000e24: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000e2a: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=205
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/E; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #1 header:
+class_idx           : 17
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10335 (0x00285f)
+static_fields_size  : 5
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #1            -
+  Class descriptor  : 'Lcom/package/G;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/G;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/G;)
+      name          : 'H'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #2              : (in Lcom/package/G;)
+      name          : 'K'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #3              : (in Lcom/package/G;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #4              : (in Lcom/package/G;)
+      name          : 'g'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/G;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000e2c:                                        |[000e2c] com.package.G.<init>:()V
+000e3c: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000e42: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=135
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/G; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #2 header:
+class_idx           : 18
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10360 (0x002878)
+static_fields_size  : 2
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #2            -
+  Class descriptor  : 'Lcom/package/H;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/H;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/H;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/H;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000e44:                                        |[000e44] com.package.H.<init>:()V
+000e54: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000e5a: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=133
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/H; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #3 header:
+class_idx           : 19
+access_flags        : 17 (0x0011)
+superclass_idx      : 6
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 108
+annotations_off     : 0 (0x000000)
+class_data_off      : 10376 (0x002888)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 2
+
+Class #3            -
+  Class descriptor  : 'Lcom/package/M;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Landroid/os/AsyncTask;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/M;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000e5c:                                        |[000e5c] com.package.M.<init>:()V
+000e6c: 7010 0900 0000                         |0000: invoke-direct {v0}, Landroid/os/AsyncTask;.<init>:()V // method@0009
+000e72: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=204
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/M; 
+
+  Virtual methods   -
+    #0              : (in Lcom/package/M;)
+      name          : 'ALLATORIxDEMO'
+      type          : '([Ljava/lang/String;)Ljava/lang/Void;'
+      access        : 0x1081 (PUBLIC VARARGS SYNTHETIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 63 16-bit code units
+000e74:                                        |[000e74] com.package.M.ALLATORIxDEMO:([Ljava/lang/String;)Ljava/lang/Void;
+000e84: 2200 3400                              |0000: new-instance v0, Ljava/net/URL; // type@0034
+000e88: 1201                                   |0002: const/4 v1, #int 0 // #0
+000e8a: 4601 0601                              |0003: aget-object v1, v6, v1
+000e8e: 7020 6700 1000                         |0005: invoke-direct {v0, v1}, Ljava/net/URL;.<init>:(Ljava/lang/String;)V // method@0067
+000e94: 6e10 6800 0000                         |0008: invoke-virtual {v0}, Ljava/net/URL;.openConnection:()Ljava/net/URLConnection; // method@0068
+000e9a: 0c00                                   |000b: move-result-object v0
+000e9c: 2201 2400                              |000c: new-instance v1, Ljava/io/BufferedReader; // type@0024
+000ea0: 2202 2700                              |000e: new-instance v2, Ljava/io/InputStreamReader; // type@0027
+000ea4: 6e10 6900 0000                         |0010: invoke-virtual {v0}, Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream; // method@0069
+000eaa: 0c00                                   |0013: move-result-object v0
+000eac: 7020 4e00 0200                         |0014: invoke-direct {v2, v0}, Ljava/io/InputStreamReader;.<init>:(Ljava/io/InputStream;)V // method@004e
+000eb2: 7020 4b00 2100                         |0017: invoke-direct {v1, v2}, Ljava/io/BufferedReader;.<init>:(Ljava/io/Reader;)V // method@004b
+000eb8: 1a00 0000                              |001a: const-string v0, "" // string@0000
+000ebc: 6e10 4c00 0100                         |001c: invoke-virtual {v1}, Ljava/io/BufferedReader;.readLine:()Ljava/lang/String; // method@004c
+000ec2: 0c00                                   |001f: move-result-object v0
+000ec4: 3800 1d00                              |0020: if-eqz v0, 003d // +001d
+000ec8: 2202 3100                              |0022: new-instance v2, Ljava/lang/StringBuilder; // type@0031
+000ecc: 7010 6100 0200                         |0024: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@0061
+000ed2: 1213                                   |0027: const/4 v3, #int 1 // #1
+000ed4: 4604 0603                              |0028: aget-object v4, v6, v3
+000ed8: 6e20 6300 4200                         |002a: invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+000ede: 0c02                                   |002d: move-result-object v2
+000ee0: 6e20 6300 0200                         |002e: invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+000ee6: 0c00                                   |0031: move-result-object v0
+000ee8: 6e10 6500 0000                         |0032: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+000eee: 0c00                                   |0035: move-result-object v0
+000ef0: 4d00 0603                              |0036: aput-object v0, v6, v3
+000ef4: 28e4                                   |0038: goto 001c // -001c
+000ef6: 0d00                                   |0039: move-exception v0
+000ef8: 6e10 4d00 0000                         |003a: invoke-virtual {v0}, Ljava/io/IOException;.printStackTrace:()V // method@004d
+000efe: 1200                                   |003d: const/4 v0, #int 0 // #0
+000f00: 1100                                   |003e: return-object v0
+      catches       : 1
+        0x0000 - 0x0038
+          Ljava/io/IOException; -> 0x0039
+      positions     : 
+        0x0000 line=182
+        0x0008 line=92
+        0x000c line=42
+        0x001a line=188
+        0x001c line=70
+        0x0022 line=44
+        0x0039 line=28
+        0x003a line=104
+        0x003d line=122
+      locals        : 
+        0x0000 - 0x003f reg=5 this Lcom/package/M; 
+        0x0000 - 0x003f reg=6 arg0 [Ljava/lang/String; 
+
+    #1              : (in Lcom/package/M;)
+      name          : 'doInBackground'
+      type          : '([Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 7 16-bit code units
+000f10:                                        |[000f10] com.package.M.doInBackground:([Ljava/lang/Object;)Ljava/lang/Object;
+000f20: 1f02 4400                              |0000: check-cast v2, [Ljava/lang/String; // type@0044
+000f24: 6e20 1600 2100                         |0002: invoke-virtual {v1, v2}, Lcom/package/M;.ALLATORIxDEMO:([Ljava/lang/String;)Ljava/lang/Void; // method@0016
+000f2a: 0c00                                   |0005: move-result-object v0
+000f2c: 1100                                   |0006: return-object v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=204
+      locals        : 
+        0x0000 - 0x0002 reg=2 arg0 [Ljava/lang/Object; 
+        0x0000 - 0x0007 reg=1 this Lcom/package/M; 
+
+  source_file_idx   : 108 (c)
+
+Class #4 header:
+class_idx           : 20
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 166
+annotations_off     : 0 (0x000000)
+class_data_off      : 10396 (0x00289c)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #4            -
+  Class descriptor  : 'Lcom/package/b;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/b;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'Z'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/b;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000f30:                                        |[000f30] com.package.b.<init>:()V
+000f40: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000f46: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=207
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/b; 
+
+  Virtual methods   -
+  source_file_idx   : 166 (t)
+
+Class #5 header:
+class_idx           : 21
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10409 (0x0028a9)
+static_fields_size  : 5
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #5            -
+  Class descriptor  : 'Lcom/package/c;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/c;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/c;)
+      name          : 'H'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #2              : (in Lcom/package/c;)
+      name          : 'K'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #3              : (in Lcom/package/c;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #4              : (in Lcom/package/c;)
+      name          : 'g'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/c;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000f48:                                        |[000f48] com.package.c.<init>:()V
+000f58: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000f5e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=70
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/c; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #6 header:
+class_idx           : 22
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 148
+annotations_off     : 6564 (0x0019a4)
+class_data_off      : 10434 (0x0028c2)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 8
+virtual_methods_size: 0
+
+Class #6            -
+  Class descriptor  : 'Lcom/package/e;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/e;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000f60:                                        |[000f60] com.package.e.<init>:()V
+000f70: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+000f76: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=215
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/e; 
+
+    #1              : (in Lcom/package/e;)
+      name          : 'ALLATORIxDEMO'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+      code          -
+      registers     : 8
+      ins           : 1
+      outs          : 3
+      insns size    : 96 16-bit code units
+000f78:                                        |[000f78] com.package.e.ALLATORIxDEMO:(Ljava/lang/String;)Ljava/lang/String;
+000f88: 1200                                   |0000: const/4 v0, #int 0 // #0
+000f8a: 1a01 0a00                              |0001: const-string v1, "Bq" // string@000a
+000f8e: 7110 2000 0100                         |0003: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+000f94: 0c01                                   |0006: move-result-object v1
+000f96: 7110 6b00 0100                         |0007: invoke-static {v1}, Ljava/security/MessageDigest;.getInstance:(Ljava/lang/String;)Ljava/security/MessageDigest; // method@006b
+000f9c: 0c01                                   |000a: move-result-object v1
+000f9e: 6e10 5b00 0700                         |000b: invoke-virtual {v7}, Ljava/lang/String;.getBytes:()[B // method@005b
+000fa4: 0c02                                   |000e: move-result-object v2
+000fa6: 6e20 6c00 2100                         |000f: invoke-virtual {v1, v2}, Ljava/security/MessageDigest;.update:([B)V // method@006c
+000fac: 6e10 6a00 0100                         |0012: invoke-virtual {v1}, Ljava/security/MessageDigest;.digest:()[B // method@006a
+000fb2: 0c03                                   |0015: move-result-object v3
+000fb4: 2204 3000                              |0016: new-instance v4, Ljava/lang/StringBuffer; // type@0030
+000fb8: 7010 5d00 0400                         |0018: invoke-direct {v4}, Ljava/lang/StringBuffer;.<init>:()V // method@005d
+000fbe: 0101                                   |001b: move v1, v0
+000fc0: 2132                                   |001c: array-length v2, v3
+000fc2: 3520 3300                              |001d: if-ge v0, v2, 0050 // +0033
+000fc6: 4800 0301                              |001f: aget-byte v0, v3, v1
+000fca: d500 ff00                              |0021: and-int/lit16 v0, v0, #int 255 // #00ff
+000fce: 7110 5300 0000                         |0023: invoke-static {v0}, Ljava/lang/Integer;.toHexString:(I)Ljava/lang/String; // method@0053
+000fd4: 0c00                                   |0026: move-result-object v0
+000fd6: 0702                                   |0027: move-object v2, v0
+000fd8: 6e10 5c00 0000                         |0028: invoke-virtual {v0}, Ljava/lang/String;.length:()I // method@005c
+000fde: 0a00                                   |002b: move-result v0
+000fe0: 1225                                   |002c: const/4 v5, #int 2 // #2
+000fe2: 3550 1c00                              |002d: if-ge v0, v5, 0049 // +001c
+000fe6: 2200 3100                              |002f: new-instance v0, Ljava/lang/StringBuilder; // type@0031
+000fea: 7010 6100 0000                         |0031: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@0061
+000ff0: 1205                                   |0034: const/4 v5, #int 0 // #0
+000ff2: 1a06 a600                              |0035: const-string v6, "t" // string@00a6
+000ff6: 7110 2000 0600                         |0037: invoke-static {v6}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+000ffc: 0c06                                   |003a: move-result-object v6
+000ffe: 6e30 6400 5006                         |003b: invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;.insert:(ILjava/lang/String;)Ljava/lang/StringBuilder; // method@0064
+001004: 0c00                                   |003e: move-result-object v0
+001006: 6e20 6300 2000                         |003f: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+00100c: 0c00                                   |0042: move-result-object v0
+00100e: 6e10 6500 0000                         |0043: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+001014: 0c00                                   |0046: move-result-object v0
+001016: 0702                                   |0047: move-object v2, v0
+001018: 28e0                                   |0048: goto 0028 // -0020
+00101a: d800 0101                              |0049: add-int/lit8 v0, v1, #int 1 // #01
+00101e: 6e20 5f00 2400                         |004b: invoke-virtual {v4, v2}, Ljava/lang/StringBuffer;.append:(Ljava/lang/String;)Ljava/lang/StringBuffer; // method@005f
+001024: 0101                                   |004e: move v1, v0
+001026: 28cd                                   |004f: goto 001c // -0033
+001028: 6e10 6000 0400                         |0050: invoke-virtual {v4}, Ljava/lang/StringBuffer;.toString:()Ljava/lang/String; // method@0060
+00102e: 0c00                                   |0053: move-result-object v0
+001030: 1100                                   |0054: return-object v0
+001032: 0d00                                   |0055: move-exception v0
+001034: 1a01 0500                              |0056: const-string v1, "!i}?6" // string@0005
+001038: 6e10 5100 0000                         |0058: invoke-virtual {v0}, Ljava/lang/Exception;.printStackTrace:()V // method@0051
+00103e: 7110 2000 0100                         |005b: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001044: 0c00                                   |005e: move-result-object v0
+001046: 28f5                                   |005f: goto 0054 // -000b
+      catches       : 1
+        0x0001 - 0x0053
+          Ljava/lang/Exception; -> 0x0055
+      positions     : 
+        0x0001 line=148
+        0x000b line=34
+        0x0012 line=192
+        0x0016 line=0
+        0x001c line=50
+        0x001f line=65
+        0x0028 line=16
+        0x002f line=60
+        0x0049 line=162
+        0x004f line=50
+        0x0050 line=20
+        0x0054 line=90
+        0x0055 line=216
+        0x0058 line=130
+        0x005b line=90
+      locals        : 
+        0x0000 - 0x0060 reg=7 arg0 Ljava/lang/String; 
+
+    #2              : (in Lcom/package/e;)
+      name          : 'ALLATORIxDEMO'
+      type          : '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 33 16-bit code units
+001054:                                        |[001054] com.package.e.ALLATORIxDEMO:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+001064: 6e10 5b00 0200                         |0000: invoke-virtual {v2}, Ljava/lang/String;.getBytes:()[B // method@005b
+00106a: 0c00                                   |0003: move-result-object v0
+00106c: 7110 1e00 0000                         |0004: invoke-static {v0}, Lcom/package/e;.ALLATORIxDEMO:([B)[B // method@001e
+001072: 0c00                                   |0007: move-result-object v0
+001074: 6e10 5b00 0300                         |0008: invoke-virtual {v3}, Ljava/lang/String;.getBytes:()[B // method@005b
+00107a: 0c01                                   |000b: move-result-object v1
+00107c: 7120 2200 1000                         |000c: invoke-static {v0, v1}, Lcom/package/e;.d:([B[B)[B // method@0022
+001082: 0c00                                   |000f: move-result-object v0
+001084: 1201                                   |0010: const/4 v1, #int 0 // #0
+001086: 7120 0b00 1000                         |0011: invoke-static {v0, v1}, Landroid/util/Base64;.encodeToString:([BI)Ljava/lang/String; // method@000b
+00108c: 0c00                                   |0014: move-result-object v0
+00108e: 1100                                   |0015: return-object v0
+001090: 0d00                                   |0016: move-exception v0
+001092: 1a01 0500                              |0017: const-string v1, "!i}?6" // string@0005
+001096: 6e10 5100 0000                         |0019: invoke-virtual {v0}, Ljava/lang/Exception;.printStackTrace:()V // method@0051
+00109c: 7110 2000 0100                         |001c: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0010a2: 0c00                                   |001f: move-result-object v0
+0010a4: 28f5                                   |0020: goto 0015 // -000b
+      catches       : 1
+        0x0000 - 0x0014
+          Ljava/lang/Exception; -> 0x0016
+      positions     : 
+        0x0000 line=15
+        0x0008 line=211
+        0x0010 line=182
+        0x0016 line=42
+        0x0019 line=70
+        0x001c line=140
+      locals        : 
+        0x0000 - 0x0021 reg=2 arg0 Ljava/lang/String; 
+        0x0000 - 0x0021 reg=3 arg1 Ljava/lang/String; 
+
+    #3              : (in Lcom/package/e;)
+      name          : 'ALLATORIxDEMO'
+      type          : '([B)[B'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 3
+      insns size    : 37 16-bit code units
+0010b4:                                        |[0010b4] com.package.e.ALLATORIxDEMO:([B)[B
+0010c4: 1a00 5700                              |0000: const-string v0, "N" // string@0057
+0010c8: 7110 2000 0000                         |0002: invoke-static {v0}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0010ce: 0c00                                   |0005: move-result-object v0
+0010d0: 7110 7800 0000                         |0006: invoke-static {v0}, Ljavax/crypto/KeyGenerator;.getInstance:(Ljava/lang/String;)Ljavax/crypto/KeyGenerator; // method@0078
+0010d6: 0c00                                   |0009: move-result-object v0
+0010d8: 1a01 0100                              |000a: const-string v1, "uK]" // string@0001
+0010dc: 7110 2000 0100                         |000c: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0010e2: 0c01                                   |000f: move-result-object v1
+0010e4: 7110 6d00 0100                         |0010: invoke-static {v1}, Ljava/security/SecureRandom;.getInstance:(Ljava/lang/String;)Ljava/security/SecureRandom; // method@006d
+0010ea: 0c01                                   |0013: move-result-object v1
+0010ec: 6e20 6e00 3100                         |0014: invoke-virtual {v1, v3}, Ljava/security/SecureRandom;.setSeed:([B)V // method@006e
+0010f2: 1302 8000                              |0017: const/16 v2, #int 128 // #80
+0010f6: 6e30 7900 2001                         |0019: invoke-virtual {v0, v2, v1}, Ljavax/crypto/KeyGenerator;.init:(ILjava/security/SecureRandom;)V // method@0079
+0010fc: 6e10 7700 0000                         |001c: invoke-virtual {v0}, Ljavax/crypto/KeyGenerator;.generateKey:()Ljavax/crypto/SecretKey; // method@0077
+001102: 0c00                                   |001f: move-result-object v0
+001104: 7210 7a00 0000                         |0020: invoke-interface {v0}, Ljavax/crypto/SecretKey;.getEncoded:()[B // method@007a
+00110a: 0c00                                   |0023: move-result-object v0
+00110c: 1100                                   |0024: return-object v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=184
+        0x000a line=174
+        0x0014 line=198
+        0x0017 line=227
+        0x001c line=193
+        0x0020 line=126
+        0x0024 line=4
+      locals        : 
+        0x0000 - 0x0025 reg=3 arg0 [B 
+
+    #4              : (in Lcom/package/e;)
+      name          : 'ALLATORIxDEMO'
+      type          : '([B[B)[B'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 30 16-bit code units
+001110:                                        |[001110] com.package.e.ALLATORIxDEMO:([B[B)[B
+001120: 2200 3d00                              |0000: new-instance v0, Ljavax/crypto/spec/SecretKeySpec; // type@003d
+001124: 1a01 5700                              |0002: const-string v1, "N" // string@0057
+001128: 7110 2000 0100                         |0004: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+00112e: 0c01                                   |0007: move-result-object v1
+001130: 7030 7b00 3001                         |0008: invoke-direct {v0, v3, v1}, Ljavax/crypto/spec/SecretKeySpec;.<init>:([BLjava/lang/String;)V // method@007b
+001136: 1a01 5700                              |000b: const-string v1, "N" // string@0057
+00113a: 7110 2000 0100                         |000d: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001140: 0c01                                   |0010: move-result-object v1
+001142: 7110 7500 0100                         |0011: invoke-static {v1}, Ljavax/crypto/Cipher;.getInstance:(Ljava/lang/String;)Ljavax/crypto/Cipher; // method@0075
+001148: 0c01                                   |0014: move-result-object v1
+00114a: 1222                                   |0015: const/4 v2, #int 2 // #2
+00114c: 6e30 7600 2100                         |0016: invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;.init:(ILjava/security/Key;)V // method@0076
+001152: 6e20 7400 4100                         |0019: invoke-virtual {v1, v4}, Ljavax/crypto/Cipher;.doFinal:([B)[B // method@0074
+001158: 0c00                                   |001c: move-result-object v0
+00115a: 1100                                   |001d: return-object v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=222
+        0x000b line=78
+        0x0015 line=37
+        0x0019 line=51
+        0x001d line=206
+      locals        : 
+        0x0000 - 0x001e reg=3 arg0 [B 
+        0x0000 - 0x001e reg=4 arg1 [B 
+
+    #5              : (in Lcom/package/e;)
+      name          : 'd'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 9
+      ins           : 1
+      outs          : 2
+      insns size    : 99 16-bit code units
+00115c:                                        |[00115c] com.package.e.d:(Ljava/lang/String;)Ljava/lang/String;
+00116c: 2200 3000                              |0000: new-instance v0, Ljava/lang/StringBuffer; // type@0030
+001170: 2201 2b00                              |0002: new-instance v1, Ljava/lang/Exception; // type@002b
+001174: 7010 4f00 0100                         |0004: invoke-direct {v1}, Ljava/lang/Exception;.<init>:()V // method@004f
+00117a: 6e10 5000 0100                         |0007: invoke-virtual {v1}, Ljava/lang/Exception;.getStackTrace:()[Ljava/lang/StackTraceElement; // method@0050
+001180: 0c01                                   |000a: move-result-object v1
+001182: 1212                                   |000b: const/4 v2, #int 1 // #1
+001184: 4601 0102                              |000c: aget-object v1, v1, v2
+001188: 6e10 5700 0100                         |000e: invoke-virtual {v1}, Ljava/lang/StackTraceElement;.getMethodName:()Ljava/lang/String; // method@0057
+00118e: 0c02                                   |0011: move-result-object v2
+001190: 7020 5e00 2000                         |0012: invoke-direct {v0, v2}, Ljava/lang/StringBuffer;.<init>:(Ljava/lang/String;)V // method@005e
+001196: 6e10 5600 0100                         |0015: invoke-virtual {v1}, Ljava/lang/StackTraceElement;.getClassName:()Ljava/lang/String; // method@0056
+00119c: 0c01                                   |0018: move-result-object v1
+00119e: 6e20 5f00 1000                         |0019: invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;.append:(Ljava/lang/String;)Ljava/lang/StringBuffer; // method@005f
+0011a4: 0c00                                   |001c: move-result-object v0
+0011a6: 6e10 6000 0000                         |001d: invoke-virtual {v0}, Ljava/lang/StringBuffer;.toString:()Ljava/lang/String; // method@0060
+0011ac: 0c04                                   |0020: move-result-object v4
+0011ae: 6e10 5c00 0400                         |0021: invoke-virtual {v4}, Ljava/lang/String;.length:()I // method@005c
+0011b4: 0a00                                   |0024: move-result v0
+0011b6: d801 00ff                              |0025: add-int/lit8 v1, v0, #int -1 // #ff
+0011ba: 6e10 5c00 0800                         |0027: invoke-virtual {v8}, Ljava/lang/String;.length:()I // method@005c
+0011c0: 0a00                                   |002a: move-result v0
+0011c2: 2305 4100                              |002b: new-array v5, v0, [C // type@0041
+0011c6: d800 00ff                              |002d: add-int/lit8 v0, v0, #int -1 // #ff
+0011ca: 0113                                   |002f: move v3, v1
+0011cc: 0102                                   |0030: move v2, v0
+0011ce: 3b00 0800                              |0031: if-gez v0, 0039 // +0008
+0011d2: 2200 2f00                              |0033: new-instance v0, Ljava/lang/String; // type@002f
+0011d6: 7020 5900 5000                         |0035: invoke-direct {v0, v5}, Ljava/lang/String;.<init>:([C)V // method@0059
+0011dc: 1100                                   |0038: return-object v0
+0011de: d806 02ff                              |0039: add-int/lit8 v6, v2, #int -1 // #ff
+0011e2: 6e20 5a00 2800                         |003b: invoke-virtual {v8, v2}, Ljava/lang/String;.charAt:(I)C // method@005a
+0011e8: 0a00                                   |003e: move-result v0
+0011ea: 6e20 5a00 3400                         |003f: invoke-virtual {v4, v3}, Ljava/lang/String;.charAt:(I)C // method@005a
+0011f0: 0a07                                   |0042: move-result v7
+0011f2: b770                                   |0043: xor-int/2addr v0, v7
+0011f4: df00 0021                              |0044: xor-int/lit8 v0, v0, #int 33 // #21
+0011f8: 8e00                                   |0046: int-to-char v0, v0
+0011fa: 5000 0502                              |0047: aput-char v0, v5, v2
+0011fe: 3a06 eaff                              |0049: if-ltz v6, 0033 // -0016
+001202: 6e20 5a00 6800                         |004b: invoke-virtual {v8, v6}, Ljava/lang/String;.charAt:(I)C // method@005a
+001208: 0a00                                   |004e: move-result v0
+00120a: 6e20 5a00 3400                         |004f: invoke-virtual {v4, v3}, Ljava/lang/String;.charAt:(I)C // method@005a
+001210: 0a02                                   |0052: move-result v2
+001212: b720                                   |0053: xor-int/2addr v0, v2
+001214: df00 0035                              |0054: xor-int/lit8 v0, v0, #int 53 // #35
+001218: 8e07                                   |0056: int-to-char v7, v0
+00121a: d802 06ff                              |0057: add-int/lit8 v2, v6, #int -1 // #ff
+00121e: d800 03ff                              |0059: add-int/lit8 v0, v3, #int -1 // #ff
+001222: 5007 0506                              |005b: aput-char v7, v5, v6
+001226: 3b00 0300                              |005d: if-gez v0, 0060 // +0003
+00122a: 0110                                   |005f: move v0, v1
+00122c: 0103                                   |0060: move v3, v0
+00122e: 0120                                   |0061: move v0, v2
+001230: 28cf                                   |0062: goto 0031 // -0031
+      catches       : (none)
+      positions     : 
+      locals        : 
+        0x0000 - 0x0063 reg=8 arg0 Ljava/lang/String; 
+
+    #6              : (in Lcom/package/e;)
+      name          : 'd'
+      type          : '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 34 16-bit code units
+001234:                                        |[001234] com.package.e.d:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+001244: 6e10 5b00 0200                         |0000: invoke-virtual {v2}, Ljava/lang/String;.getBytes:()[B // method@005b
+00124a: 0c00                                   |0003: move-result-object v0
+00124c: 7110 1e00 0000                         |0004: invoke-static {v0}, Lcom/package/e;.ALLATORIxDEMO:([B)[B // method@001e
+001252: 0c00                                   |0007: move-result-object v0
+001254: 1201                                   |0008: const/4 v1, #int 0 // #0
+001256: 7120 0a00 1300                         |0009: invoke-static {v3, v1}, Landroid/util/Base64;.decode:(Ljava/lang/String;I)[B // method@000a
+00125c: 0c01                                   |000c: move-result-object v1
+00125e: 7120 1f00 1000                         |000d: invoke-static {v0, v1}, Lcom/package/e;.ALLATORIxDEMO:([B[B)[B // method@001f
+001264: 0c01                                   |0010: move-result-object v1
+001266: 2200 2f00                              |0011: new-instance v0, Ljava/lang/String; // type@002f
+00126a: 7020 5800 1000                         |0013: invoke-direct {v0, v1}, Ljava/lang/String;.<init>:([B)V // method@0058
+001270: 1100                                   |0016: return-object v0
+001272: 0d00                                   |0017: move-exception v0
+001274: 1a01 0500                              |0018: const-string v1, "!i}?6" // string@0005
+001278: 6e10 5100 0000                         |001a: invoke-virtual {v0}, Ljava/lang/Exception;.printStackTrace:()V // method@0051
+00127e: 7110 2000 0100                         |001d: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001284: 0c00                                   |0020: move-result-object v0
+001286: 28f5                                   |0021: goto 0016 // -000b
+      catches       : 1
+        0x0000 - 0x0016
+          Ljava/lang/Exception; -> 0x0017
+      positions     : 
+        0x0000 line=87
+        0x0008 line=35
+        0x000d line=128
+        0x0011 line=106
+        0x0017 line=40
+        0x001a line=123
+        0x001d line=19
+      locals        : 
+        0x0000 - 0x0022 reg=2 arg0 Ljava/lang/String; 
+        0x0000 - 0x0022 reg=3 arg1 Ljava/lang/String; 
+
+    #7              : (in Lcom/package/e;)
+      name          : 'd'
+      type          : '([B[B)[B'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 30 16-bit code units
+001294:                                        |[001294] com.package.e.d:([B[B)[B
+0012a4: 2200 3d00                              |0000: new-instance v0, Ljavax/crypto/spec/SecretKeySpec; // type@003d
+0012a8: 1a01 5700                              |0002: const-string v1, "N" // string@0057
+0012ac: 7110 2000 0100                         |0004: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0012b2: 0c01                                   |0007: move-result-object v1
+0012b4: 7030 7b00 3001                         |0008: invoke-direct {v0, v3, v1}, Ljavax/crypto/spec/SecretKeySpec;.<init>:([BLjava/lang/String;)V // method@007b
+0012ba: 1a01 5700                              |000b: const-string v1, "N" // string@0057
+0012be: 7110 2000 0100                         |000d: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0012c4: 0c01                                   |0010: move-result-object v1
+0012c6: 7110 7500 0100                         |0011: invoke-static {v1}, Ljavax/crypto/Cipher;.getInstance:(Ljava/lang/String;)Ljavax/crypto/Cipher; // method@0075
+0012cc: 0c01                                   |0014: move-result-object v1
+0012ce: 1212                                   |0015: const/4 v2, #int 1 // #1
+0012d0: 6e30 7600 2100                         |0016: invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;.init:(ILjava/security/Key;)V // method@0076
+0012d6: 6e20 7400 4100                         |0019: invoke-virtual {v1, v4}, Ljavax/crypto/Cipher;.doFinal:([B)[B // method@0074
+0012dc: 0c00                                   |001c: move-result-object v0
+0012de: 1100                                   |001d: return-object v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=131
+        0x000b line=108
+        0x0015 line=161
+        0x0019 line=32
+        0x001d line=203
+      locals        : 
+        0x0000 - 0x001e reg=3 arg0 [B 
+        0x0000 - 0x001e reg=4 arg1 [B 
+
+  Virtual methods   -
+  source_file_idx   : 148 (o)
+
+Class #7 header:
+class_idx           : 23
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10479 (0x0028ef)
+static_fields_size  : 4
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #7            -
+  Class descriptor  : 'Lcom/package/f;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/f;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/f;)
+      name          : 'K'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #2              : (in Lcom/package/f;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #3              : (in Lcom/package/f;)
+      name          : 'g'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/f;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0012e0:                                        |[0012e0] com.package.f.<init>:()V
+0012f0: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+0012f6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=14
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/f; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #8 header:
+class_idx           : 24
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10501 (0x002905)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #8            -
+  Class descriptor  : 'Lcom/package/h;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/h;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0012f8:                                        |[0012f8] com.package.h.<init>:()V
+001308: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+00130e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=215
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/h; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #9 header:
+class_idx           : 25
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10511 (0x00290f)
+static_fields_size  : 2
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #9            -
+  Class descriptor  : 'Lcom/package/i;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/i;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/i;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/i;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+001310:                                        |[001310] com.package.i.<init>:()V
+001320: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+001326: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=2
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/i; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #10 header:
+class_idx           : 26
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6548 (0x001994)
+class_data_off      : 10527 (0x00291f)
+static_fields_size  : 2
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 0
+
+Class #10            -
+  Class descriptor  : 'Lcom/package/j;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/package/j;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+    #1              : (in Lcom/package/j;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/j;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+001328:                                        |[001328] com.package.j.<init>:()V
+001338: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+00133e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=182
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/j; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #11 header:
+class_idx           : 27
+access_flags        : 17 (0x0011)
+superclass_idx      : 45
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 140
+annotations_off     : 6604 (0x0019cc)
+class_data_off      : 10543 (0x00292f)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 2
+virtual_methods_size: 0
+
+Class #11            -
+  Class descriptor  : 'Lcom/package/l;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/package/l;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+001340:                                        |[001340] com.package.l.<init>:()V
+001350: 7010 5400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0054
+001356: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=127
+        0x0003 line=2
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/package/l; 
+
+    #1              : (in Lcom/package/l;)
+      name          : 'ALLATORIxDEMO'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 9
+      ins           : 1
+      outs          : 2
+      insns size    : 99 16-bit code units
+001358:                                        |[001358] com.package.l.ALLATORIxDEMO:(Ljava/lang/String;)Ljava/lang/String;
+001368: 2200 3000                              |0000: new-instance v0, Ljava/lang/StringBuffer; // type@0030
+00136c: 2201 2b00                              |0002: new-instance v1, Ljava/lang/Exception; // type@002b
+001370: 7010 4f00 0100                         |0004: invoke-direct {v1}, Ljava/lang/Exception;.<init>:()V // method@004f
+001376: 6e10 5000 0100                         |0007: invoke-virtual {v1}, Ljava/lang/Exception;.getStackTrace:()[Ljava/lang/StackTraceElement; // method@0050
+00137c: 0c01                                   |000a: move-result-object v1
+00137e: 1212                                   |000b: const/4 v2, #int 1 // #1
+001380: 4601 0102                              |000c: aget-object v1, v1, v2
+001384: 6e10 5700 0100                         |000e: invoke-virtual {v1}, Ljava/lang/StackTraceElement;.getMethodName:()Ljava/lang/String; // method@0057
+00138a: 0c02                                   |0011: move-result-object v2
+00138c: 7020 5e00 2000                         |0012: invoke-direct {v0, v2}, Ljava/lang/StringBuffer;.<init>:(Ljava/lang/String;)V // method@005e
+001392: 6e10 5600 0100                         |0015: invoke-virtual {v1}, Ljava/lang/StackTraceElement;.getClassName:()Ljava/lang/String; // method@0056
+001398: 0c01                                   |0018: move-result-object v1
+00139a: 6e20 5f00 1000                         |0019: invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;.append:(Ljava/lang/String;)Ljava/lang/StringBuffer; // method@005f
+0013a0: 0c00                                   |001c: move-result-object v0
+0013a2: 6e10 6000 0000                         |001d: invoke-virtual {v0}, Ljava/lang/StringBuffer;.toString:()Ljava/lang/String; // method@0060
+0013a8: 0c04                                   |0020: move-result-object v4
+0013aa: 6e10 5c00 0400                         |0021: invoke-virtual {v4}, Ljava/lang/String;.length:()I // method@005c
+0013b0: 0a00                                   |0024: move-result v0
+0013b2: d801 00ff                              |0025: add-int/lit8 v1, v0, #int -1 // #ff
+0013b6: 6e10 5c00 0800                         |0027: invoke-virtual {v8}, Ljava/lang/String;.length:()I // method@005c
+0013bc: 0a00                                   |002a: move-result v0
+0013be: 2305 4100                              |002b: new-array v5, v0, [C // type@0041
+0013c2: d800 00ff                              |002d: add-int/lit8 v0, v0, #int -1 // #ff
+0013c6: 0113                                   |002f: move v3, v1
+0013c8: 0102                                   |0030: move v2, v0
+0013ca: 3b00 0800                              |0031: if-gez v0, 0039 // +0008
+0013ce: 2200 2f00                              |0033: new-instance v0, Ljava/lang/String; // type@002f
+0013d2: 7020 5900 5000                         |0035: invoke-direct {v0, v5}, Ljava/lang/String;.<init>:([C)V // method@0059
+0013d8: 1100                                   |0038: return-object v0
+0013da: d806 02ff                              |0039: add-int/lit8 v6, v2, #int -1 // #ff
+0013de: 6e20 5a00 2800                         |003b: invoke-virtual {v8, v2}, Ljava/lang/String;.charAt:(I)C // method@005a
+0013e4: 0a00                                   |003e: move-result v0
+0013e6: 6e20 5a00 3400                         |003f: invoke-virtual {v4, v3}, Ljava/lang/String;.charAt:(I)C // method@005a
+0013ec: 0a07                                   |0042: move-result v7
+0013ee: b770                                   |0043: xor-int/2addr v0, v7
+0013f0: df00 007a                              |0044: xor-int/lit8 v0, v0, #int 122 // #7a
+0013f4: 8e00                                   |0046: int-to-char v0, v0
+0013f6: 5000 0502                              |0047: aput-char v0, v5, v2
+0013fa: 3a06 eaff                              |0049: if-ltz v6, 0033 // -0016
+0013fe: 6e20 5a00 6800                         |004b: invoke-virtual {v8, v6}, Ljava/lang/String;.charAt:(I)C // method@005a
+001404: 0a00                                   |004e: move-result v0
+001406: 6e20 5a00 3400                         |004f: invoke-virtual {v4, v3}, Ljava/lang/String;.charAt:(I)C // method@005a
+00140c: 0a02                                   |0052: move-result v2
+00140e: b720                                   |0053: xor-int/2addr v0, v2
+001410: df00 004f                              |0054: xor-int/lit8 v0, v0, #int 79 // #4f
+001414: 8e07                                   |0056: int-to-char v7, v0
+001416: d802 06ff                              |0057: add-int/lit8 v2, v6, #int -1 // #ff
+00141a: d800 03ff                              |0059: add-int/lit8 v0, v3, #int -1 // #ff
+00141e: 5007 0506                              |005b: aput-char v7, v5, v6
+001422: 3b00 0300                              |005d: if-gez v0, 0060 // +0003
+001426: 0110                                   |005f: move v0, v1
+001428: 0103                                   |0060: move v3, v0
+00142a: 0120                                   |0061: move v0, v2
+00142c: 28cf                                   |0062: goto 0031 // -0031
+      catches       : (none)
+      positions     : 
+      locals        : 
+        0x0000 - 0x0063 reg=8 arg0 Ljava/lang/String; 
+
+  Virtual methods   -
+  source_file_idx   : 140 (i)
+
+Class #12 header:
+class_idx           : 28
+access_flags        : 17 (0x0011)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 157
+annotations_off     : 0 (0x000000)
+class_data_off      : 10558 (0x00293e)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 4
+virtual_methods_size: 2
+
+Class #12            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayMathsActivity;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'Ljava/util/ArrayList;'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x11009 (PUBLIC STATIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 2
+      ins           : 0
+      outs          : 2
+      insns size    : 22 16-bit code units
+001430:                                        |[001430] com.uaf.matt.testone.DisplayMathsActivity.<clinit>:()V
+001440: 2200 3900                              |0000: new-instance v0, Ljava/util/ArrayList; // type@0039
+001444: 7010 6f00 0000                         |0002: invoke-direct {v0}, Ljava/util/ArrayList;.<init>:()V // method@006f
+00144a: 6900 2000                              |0005: sput-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+00144e: 6200 2000                              |0007: sget-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+001452: 6201 2300                              |0009: sget-object v1, Ljava/math/BigInteger;.ZERO:Ljava/math/BigInteger; // field@0023
+001456: 6e20 7100 1000                         |000b: invoke-virtual {v0, v1}, Ljava/util/ArrayList;.add:(Ljava/lang/Object;)Z // method@0071
+00145c: 6200 2000                              |000e: sget-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+001460: 6201 2200                              |0010: sget-object v1, Ljava/math/BigInteger;.ONE:Ljava/math/BigInteger; // field@0022
+001464: 6e20 7100 1000                         |0012: invoke-virtual {v0, v1}, Ljava/util/ArrayList;.add:(Ljava/lang/Object;)Z // method@0071
+00146a: 0e00                                   |0015: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=70
+        0x0007 line=140
+        0x000e line=28
+        0x0015 line=104
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+00146c:                                        |[00146c] com.uaf.matt.testone.DisplayMathsActivity.<init>:()V
+00147c: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+001482: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=141
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/uaf/matt/testone/DisplayMathsActivity; 
+
+    #2              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : '(I)Ljava/math/BigInteger;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 3
+      insns size    : 38 16-bit code units
+001484:                                        |[001484] com.uaf.matt.testone.DisplayMathsActivity.ALLATORIxDEMO:(I)Ljava/math/BigInteger;
+001494: 6200 2000                              |0000: sget-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+001498: 6e10 7300 0000                         |0002: invoke-virtual {v0}, Ljava/util/ArrayList;.size:()I // method@0073
+00149e: 0a00                                   |0005: move-result v0
+0014a0: 3403 1700                              |0006: if-lt v3, v0, 001d // +0017
+0014a4: 6200 2000                              |0008: sget-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+0014a8: d801 03ff                              |000a: add-int/lit8 v1, v3, #int -1 // #ff
+0014ac: 7110 2b00 0100                         |000c: invoke-static {v1}, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:(I)Ljava/math/BigInteger; // method@002b
+0014b2: 0c01                                   |000f: move-result-object v1
+0014b4: d802 03fe                              |0010: add-int/lit8 v2, v3, #int -2 // #fe
+0014b8: 7110 2b00 0200                         |0012: invoke-static {v2}, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:(I)Ljava/math/BigInteger; // method@002b
+0014be: 0c02                                   |0015: move-result-object v2
+0014c0: 6e20 6600 2100                         |0016: invoke-virtual {v1, v2}, Ljava/math/BigInteger;.add:(Ljava/math/BigInteger;)Ljava/math/BigInteger; // method@0066
+0014c6: 0c01                                   |0019: move-result-object v1
+0014c8: 6e30 7000 3001                         |001a: invoke-virtual {v0, v3, v1}, Ljava/util/ArrayList;.add:(ILjava/lang/Object;)V // method@0070
+0014ce: 6200 2000                              |001d: sget-object v0, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:Ljava/util/ArrayList; // field@0020
+0014d2: 6e20 7200 3000                         |001f: invoke-virtual {v0, v3}, Ljava/util/ArrayList;.get:(I)Ljava/lang/Object; // method@0072
+0014d8: 0c00                                   |0022: move-result-object v0
+0014da: 1f00 3300                              |0023: check-cast v0, Ljava/math/BigInteger; // type@0033
+0014de: 1100                                   |0025: return-object v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=122
+        0x0008 line=14
+        0x001d line=87
+      locals        : 
+        0x0000 - 0x0026 reg=3 arg0 I 
+
+    #3              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : '()V'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 6 16-bit code units
+0014e0:                                        |[0014e0] com.uaf.matt.testone.DisplayMathsActivity.ALLATORIxDEMO:()V
+0014f0: 1a00 a400                              |0000: const-string v0, "skJV,ugIgXd" // string@00a4
+0014f4: 7110 2800 0000                         |0002: invoke-static {v0}, Lcom/package/l;.ALLATORIxDEMO:(Ljava/lang/String;)Ljava/lang/String; // method@0028
+0014fa: 0e00                                   |0005: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=92
+        0x0005 line=42
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 3
+      insns size    : 59 16-bit code units
+0014fc:                                        |[0014fc] com.uaf.matt.testone.DisplayMathsActivity.onCreate:(Landroid/os/Bundle;)V
+00150c: 1204                                   |0000: const/4 v4, #int 0 // #0
+00150e: 1500 037f                              |0001: const/high16 v0, #int 2130903040 // #7f03
+001512: 6f20 0100 6500                         |0003: invoke-super {v5, v6}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+001518: 6e20 3000 0500                         |0006: invoke-virtual {v5, v0}, Lcom/uaf/matt/testone/DisplayMathsActivity;.setContentView:(I)V // method@0030
+00151e: 6e10 2d00 0500                         |0009: invoke-virtual {v5}, Lcom/uaf/matt/testone/DisplayMathsActivity;.getIntent:()Landroid/content/Intent; // method@002d
+001524: 0c00                                   |000c: move-result-object v0
+001526: 1a01 6e00                              |000d: const-string v1, "com.uaf.matt.testone.MESSAGE" // string@006e
+00152a: 6e30 0500 1004                         |000f: invoke-virtual {v0, v1, v4}, Landroid/content/Intent;.getIntExtra:(Ljava/lang/String;I)I // method@0005
+001530: 0a00                                   |0012: move-result v0
+001532: 2201 0f00                              |0013: new-instance v1, Landroid/widget/TextView; // type@000f
+001536: 7020 0f00 5100                         |0015: invoke-direct {v1, v5}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000f
+00153c: 1502 2042                              |0018: const/high16 v2, #int 1109393408 // #4220
+001540: 6e20 1100 2100                         |001a: invoke-virtual {v1, v2}, Landroid/widget/TextView;.setTextSize:(F)V // method@0011
+001546: 2202 3100                              |001d: new-instance v2, Ljava/lang/StringBuilder; // type@0031
+00154a: 7010 6100 0200                         |001f: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@0061
+001550: 1a03 0000                              |0022: const-string v3, "" // string@0000
+001554: 6e30 6400 4203                         |0024: invoke-virtual {v2, v4, v3}, Ljava/lang/StringBuilder;.insert:(ILjava/lang/String;)Ljava/lang/StringBuilder; // method@0064
+00155a: 0c02                                   |0027: move-result-object v2
+00155c: 7110 2b00 0000                         |0028: invoke-static {v0}, Lcom/uaf/matt/testone/DisplayMathsActivity;.ALLATORIxDEMO:(I)Ljava/math/BigInteger; // method@002b
+001562: 0c00                                   |002b: move-result-object v0
+001564: 6e20 6200 0200                         |002c: invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+00156a: 0c00                                   |002f: move-result-object v0
+00156c: 6e10 6500 0000                         |0030: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+001572: 0c00                                   |0033: move-result-object v0
+001574: 6e20 1000 0100                         |0034: invoke-virtual {v1, v0}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@0010
+00157a: 6e20 3100 1500                         |0037: invoke-virtual {v5, v1}, Lcom/uaf/matt/testone/DisplayMathsActivity;.setContentView:(Landroid/view/View;)V // method@0031
+001580: 0e00                                   |003a: return-void
+      catches       : (none)
+      positions     : 
+        0x0001 line=174
+        0x0006 line=198
+        0x0009 line=193
+        0x000d line=126
+        0x0013 line=136
+        0x0018 line=221
+        0x001d line=165
+        0x0037 line=131
+        0x003a line=108
+      locals        : 
+        0x0000 - 0x003b reg=5 this Lcom/uaf/matt/testone/DisplayMathsActivity; 
+        0x0000 - 0x003b reg=6 arg0 Landroid/os/Bundle; 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+001584:                                        |[001584] com.uaf.matt.testone.DisplayMathsActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+001594: 7210 0d00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000d
+00159a: 0a00                                   |0003: move-result v0
+00159c: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+0015a2: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+0015a6: 1210                                   |0009: const/4 v0, #int 1 // #1
+0015a8: 0f00                                   |000a: return v0
+0015aa: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+0015b0: 0a00                                   |000e: move-result v0
+0015b2: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+        0x0000 line=69
+        0x0004 line=37
+        0x0009 line=51
+        0x000a line=224
+      locals        : 
+        0x0000 - 0x0010 reg=2 this Lcom/uaf/matt/testone/DisplayMathsActivity; 
+        0x0000 - 0x0010 reg=3 arg0 Landroid/view/MenuItem; 
+
+  source_file_idx   : 157 (r)
+
+Class #13 header:
+class_idx           : 29
+access_flags        : 17 (0x0011)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 153
+annotations_off     : 0 (0x000000)
+class_data_off      : 10597 (0x002965)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 2
+virtual_methods_size: 2
+
+Class #13            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayMessageActivity;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0015b4:                                        |[0015b4] com.uaf.matt.testone.DisplayMessageActivity.<init>:()V
+0015c4: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+0015ca: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=127
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/uaf/matt/testone/DisplayMessageActivity; 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : '()V'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 6 16-bit code units
+0015cc:                                        |[0015cc] com.uaf.matt.testone.DisplayMessageActivity.ALLATORIxDEMO:()V
+0015dc: 1a00 0300                              |0000: const-string v0, "	00$,w<3<"?" // string@0003
+0015e0: 7110 2000 0000                         |0002: invoke-static {v0}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+0015e6: 0e00                                   |0005: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=211
+        0x0005 line=182
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 8
+      ins           : 2
+      outs          : 3
+      insns size    : 88 16-bit code units
+0015e8:                                        |[0015e8] com.uaf.matt.testone.DisplayMessageActivity.onCreate:(Landroid/os/Bundle;)V
+0015f8: 1400 0100 037f                         |0000: const v0, #float 174128887730233583002069148843976425472.000000 // #7f030001
+0015fe: 6f20 0100 7600                         |0003: invoke-super {v6, v7}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+001604: 6e20 3700 0600                         |0006: invoke-virtual {v6, v0}, Lcom/uaf/matt/testone/DisplayMessageActivity;.setContentView:(I)V // method@0037
+00160a: 6e10 3400 0600                         |0009: invoke-virtual {v6}, Lcom/uaf/matt/testone/DisplayMessageActivity;.getIntent:()Landroid/content/Intent; // method@0034
+001610: 0c00                                   |000c: move-result-object v0
+001612: 1a01 6e00                              |000d: const-string v1, "com.uaf.matt.testone.MESSAGE" // string@006e
+001616: 6e20 0600 1000                         |000f: invoke-virtual {v0, v1}, Landroid/content/Intent;.getStringExtra:(Ljava/lang/String;)Ljava/lang/String; // method@0006
+00161c: 0c00                                   |0012: move-result-object v0
+00161e: 1a01 0400                              |0013: const-string v1, "'656Y33!30(e6/;6:><" // string@0004
+001622: 7110 2000 0100                         |0015: invoke-static {v1}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001628: 0c01                                   |0018: move-result-object v1
+00162a: 2202 0f00                              |0019: new-instance v2, Landroid/widget/TextView; // type@000f
+00162e: 7020 0f00 6200                         |001b: invoke-direct {v2, v6}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000f
+001634: 1503 a041                              |001e: const/high16 v3, #int 1101004800 // #41a0
+001638: 6e20 1100 3200                         |0020: invoke-virtual {v2, v3}, Landroid/widget/TextView;.setTextSize:(F)V // method@0011
+00163e: 7110 1c00 0000                         |0023: invoke-static {v0}, Lcom/package/e;.ALLATORIxDEMO:(Ljava/lang/String;)Ljava/lang/String; // method@001c
+001644: 0c03                                   |0026: move-result-object v3
+001646: 7120 1d00 3100                         |0027: invoke-static {v1, v3}, Lcom/package/e;.ALLATORIxDEMO:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; // method@001d
+00164c: 0c01                                   |002a: move-result-object v1
+00164e: 2203 3100                              |002b: new-instance v3, Ljava/lang/StringBuilder; // type@0031
+001652: 7010 6100 0300                         |002d: invoke-direct {v3}, Ljava/lang/StringBuilder;.<init>:()V // method@0061
+001658: 1204                                   |0030: const/4 v4, #int 0 // #0
+00165a: 1a05 0200                              |0031: const-string v5, "	#!533%r$5"3b$;?::'(!.;vx" // string@0002
+00165e: 7110 2000 0500                         |0033: invoke-static {v5}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001664: 0c05                                   |0036: move-result-object v5
+001666: 6e30 6400 4305                         |0037: invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;.insert:(ILjava/lang/String;)Ljava/lang/StringBuilder; // method@0064
+00166c: 0c03                                   |003a: move-result-object v3
+00166e: 6e20 6300 0300                         |003b: invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+001674: 0c00                                   |003e: move-result-object v0
+001676: 1a03 5600                              |003f: const-string v3, "N75!5'7f1"À€$b$;?::'(!.;vx" // string@0056
+00167a: 7110 2000 0300                         |0041: invoke-static {v3}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001680: 0c03                                   |0044: move-result-object v3
+001682: 6e20 6300 3000                         |0045: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+001688: 0c00                                   |0048: move-result-object v0
+00168a: 6e20 6300 1000                         |0049: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+001690: 0c00                                   |004c: move-result-object v0
+001692: 6e10 6500 0000                         |004d: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+001698: 0c00                                   |0050: move-result-object v0
+00169a: 6e20 1000 0200                         |0051: invoke-virtual {v2, v0}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@0010
+0016a0: 6e20 3800 2600                         |0054: invoke-virtual {v6, v2}, Lcom/uaf/matt/testone/DisplayMessageActivity;.setContentView:(Landroid/view/View;)V // method@0038
+0016a6: 0e00                                   |0057: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=70
+        0x0006 line=44
+        0x0009 line=28
+        0x000d line=104
+        0x0013 line=190
+        0x0019 line=14
+        0x001e line=22
+        0x0023 line=87
+        0x0027 line=35
+        0x002b line=128
+        0x0054 line=106
+        0x0057 line=135
+      locals        : 
+        0x0000 - 0x0058 reg=6 this Lcom/uaf/matt/testone/DisplayMessageActivity; 
+        0x0000 - 0x0058 reg=7 arg0 Landroid/os/Bundle; 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+0016a8:                                        |[0016a8] com.uaf.matt.testone.DisplayMessageActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+0016b8: 7210 0d00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000d
+0016be: 0a00                                   |0003: move-result v0
+0016c0: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+0016c6: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+0016ca: 1210                                   |0009: const/4 v0, #int 1 // #1
+0016cc: 0f00                                   |000a: return v0
+0016ce: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+0016d4: 0a00                                   |000e: move-result v0
+0016d6: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+        0x0000 line=205
+        0x0004 line=184
+        0x0009 line=174
+        0x000a line=193
+      locals        : 
+        0x0000 - 0x0010 reg=2 this Lcom/uaf/matt/testone/DisplayMessageActivity; 
+        0x0000 - 0x0010 reg=3 arg0 Landroid/view/MenuItem; 
+
+  source_file_idx   : 153 (p)
+
+Class #14 header:
+class_idx           : 30
+access_flags        : 17 (0x0011)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 108
+annotations_off     : 0 (0x000000)
+class_data_off      : 10622 (0x00297e)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 2
+virtual_methods_size: 2
+
+Class #14            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayWebPageActivity;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0016d8:                                        |[0016d8] com.uaf.matt.testone.DisplayWebPageActivity.<init>:()V
+0016e8: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+0016ee: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=128
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/uaf/matt/testone/DisplayWebPageActivity; 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : '()V'
+      access        : 0x100a (PRIVATE STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 6 16-bit code units
+0016f0:                                        |[0016f0] com.uaf.matt.testone.DisplayWebPageActivity.ALLATORIxDEMO:()V
+001700: 1a00 0300                              |0000: const-string v0, "	00$,w<3<"?" // string@0003
+001704: 7110 2000 0000                         |0002: invoke-static {v0}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+00170a: 0e00                                   |0005: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=33
+        0x0005 line=205
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 10
+      ins           : 2
+      outs          : 3
+      insns size    : 82 16-bit code units
+00170c:                                        |[00170c] com.uaf.matt.testone.DisplayWebPageActivity.onCreate:(Landroid/os/Bundle;)V
+00171c: 1400 0200 037f                         |0000: const v0, #float 174128908012643186653739572791227711488.000000 // #7f030002
+001722: 6f20 0100 9800                         |0003: invoke-super {v8, v9}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+001728: 6e20 3e00 0800                         |0006: invoke-virtual {v8, v0}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.setContentView:(I)V // method@003e
+00172e: 6e10 3b00 0800                         |0009: invoke-virtual {v8}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.getIntent:()Landroid/content/Intent; // method@003b
+001734: 0c00                                   |000c: move-result-object v0
+001736: 2201 0f00                              |000d: new-instance v1, Landroid/widget/TextView; // type@000f
+00173a: 7020 0f00 8100                         |000f: invoke-direct {v1, v8}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000f
+001740: 1a02 6e00                              |0012: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@006e
+001744: 1503 2041                              |0014: const/high16 v3, #int 1092616192 // #4120
+001748: 6e20 1100 3100                         |0016: invoke-virtual {v1, v3}, Landroid/widget/TextView;.setTextSize:(F)V // method@0011
+00174e: 6e20 0600 2000                         |0019: invoke-virtual {v0, v2}, Landroid/content/Intent;.getStringExtra:(Ljava/lang/String;)Ljava/lang/String; // method@0006
+001754: 0c00                                   |001c: move-result-object v0
+001756: 1a02 8b00                              |001d: const-string v2, "h" // string@008b
+00175a: 7110 2000 0200                         |001f: invoke-static {v2}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001760: 0c02                                   |0022: move-result-object v2
+001762: 2203 1300                              |0023: new-instance v3, Lcom/package/M; // type@0013
+001766: 7010 1500 0300                         |0025: invoke-direct {v3}, Lcom/package/M;.<init>:()V // method@0015
+00176c: 1224                                   |0028: const/4 v4, #int 2 // #2
+00176e: 2344 4400                              |0029: new-array v4, v4, [Ljava/lang/String; // type@0044
+001772: 2205 3100                              |002b: new-instance v5, Ljava/lang/StringBuilder; // type@0031
+001776: 7010 6100 0500                         |002d: invoke-direct {v5}, Ljava/lang/StringBuilder;.<init>:()V // method@0061
+00177c: 1206                                   |0030: const/4 v6, #int 0 // #0
+00177e: 1a07 0600                              |0031: const-string v7, "0 ~xl#n5)?#x!.8s;&6.+)j=e" // string@0006
+001782: 7110 2000 0700                         |0033: invoke-static {v7}, Lcom/package/e;.d:(Ljava/lang/String;)Ljava/lang/String; // method@0020
+001788: 0c07                                   |0036: move-result-object v7
+00178a: 6e30 6400 6507                         |0037: invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;.insert:(ILjava/lang/String;)Ljava/lang/StringBuilder; // method@0064
+001790: 0c05                                   |003a: move-result-object v5
+001792: 6e20 6300 0500                         |003b: invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+001798: 0c00                                   |003e: move-result-object v0
+00179a: 6e10 6500 0000                         |003f: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+0017a0: 0c00                                   |0042: move-result-object v0
+0017a2: 4d00 0406                              |0043: aput-object v0, v4, v6
+0017a6: 1210                                   |0045: const/4 v0, #int 1 // #1
+0017a8: 4d02 0400                              |0046: aput-object v2, v4, v0
+0017ac: 6e20 1800 4300                         |0048: invoke-virtual {v3, v4}, Lcom/package/M;.execute:([Ljava/lang/Object;)Landroid/os/AsyncTask; // method@0018
+0017b2: 6e20 1000 2100                         |004b: invoke-virtual {v1, v2}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@0010
+0017b8: 6e20 3f00 1800                         |004e: invoke-virtual {v8, v1}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.setContentView:(Landroid/view/View;)V // method@003f
+0017be: 0e00                                   |0051: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=174
+        0x0006 line=198
+        0x0009 line=227
+        0x000d line=193
+        0x0014 line=126
+        0x0019 line=4
+        0x001d line=136
+        0x0023 line=221
+        0x004b line=165
+        0x004e line=2
+        0x0051 line=131
+      locals        : 
+        0x0000 - 0x0052 reg=8 this Lcom/uaf/matt/testone/DisplayWebPageActivity; 
+        0x0000 - 0x0052 reg=9 arg0 Landroid/os/Bundle; 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+0017c0:                                        |[0017c0] com.uaf.matt.testone.DisplayWebPageActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+0017d0: 7210 0d00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000d
+0017d6: 0a00                                   |0003: move-result v0
+0017d8: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+0017de: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+0017e2: 1210                                   |0009: const/4 v0, #int 1 // #1
+0017e4: 0f00                                   |000a: return v0
+0017e6: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+0017ec: 0a00                                   |000e: move-result v0
+0017ee: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+        0x0000 line=213
+        0x0004 line=78
+        0x0009 line=37
+        0x000b line=31
+      locals        : 
+        0x0000 - 0x0010 reg=2 this Lcom/uaf/matt/testone/DisplayWebPageActivity; 
+        0x0000 - 0x0010 reg=3 arg0 Landroid/view/MenuItem; 
+
+  source_file_idx   : 108 (c)
+
+Class #15 header:
+class_idx           : 31
+access_flags        : 17 (0x0011)
+superclass_idx      : 3
+interfaces_off      : 0 (0x000000)
+source_file_idx     : 144
+annotations_off     : 0 (0x000000)
+class_data_off      : 10647 (0x002997)
+static_fields_size  : 1
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 6
+
+Class #15            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/TestOneActivity;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'ALLATORIxDEMO'
+      type          : 'Ljava/lang/String;'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0017f0:                                        |[0017f0] com.uaf.matt.testone.TestOneActivity.<init>:()V
+001800: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+001806: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=9
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/uaf/matt/testone/TestOneActivity; 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'doMaths'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 37 16-bit code units
+001808:                                        |[001808] com.uaf.matt.testone.TestOneActivity.doMaths:(Landroid/view/View;)V
+001818: 2201 0500                              |0000: new-instance v1, Landroid/content/Intent; // type@0005
+00181c: 1c00 1c00                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayMathsActivity; // type@001c
+001820: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+001826: 1400 0100 087f                         |0007: const v0, #float 180775027709158162366588184145378148352.000000 // #7f080001
+00182c: 6e20 4300 0300                         |000a: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0043
+001832: 0c00                                   |000d: move-result-object v0
+001834: 1f00 0e00                              |000e: check-cast v0, Landroid/widget/EditText; // type@000e
+001838: 6e10 0e00 0000                         |0010: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000e
+00183e: 0c00                                   |0013: move-result-object v0
+001840: 6e10 5500 0000                         |0014: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@0055
+001846: 0c00                                   |0017: move-result-object v0
+001848: 7110 5200 0000                         |0018: invoke-static {v0}, Ljava/lang/Integer;.parseInt:(Ljava/lang/String;)I // method@0052
+00184e: 0a00                                   |001b: move-result v0
+001850: 1a02 6e00                              |001c: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@006e
+001854: 6e30 0700 2100                         |001e: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;I)Landroid/content/Intent; // method@0007
+00185a: 6e20 4a00 1300                         |0021: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@004a
+001860: 0e00                                   |0024: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=203
+        0x0007 line=173
+        0x0010 line=144
+        0x001c line=213
+        0x0021 line=69
+        0x0024 line=222
+      locals        : 
+        0x0000 - 0x0025 reg=3 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x0025 reg=4 arg0 Landroid/view/View; 
+
+    #1              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'encryptMessage'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 32 16-bit code units
+001864:                                        |[001864] com.uaf.matt.testone.TestOneActivity.encryptMessage:(Landroid/view/View;)V
+001874: 2201 0500                              |0000: new-instance v1, Landroid/content/Intent; // type@0005
+001878: 1c00 1d00                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayMessageActivity; // type@001d
+00187c: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+001882: 1500 087f                              |0007: const/high16 v0, #int 2131230720 // #7f08
+001886: 6e20 4300 0300                         |0009: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0043
+00188c: 0c00                                   |000c: move-result-object v0
+00188e: 1f00 0e00                              |000d: check-cast v0, Landroid/widget/EditText; // type@000e
+001892: 6e10 0e00 0000                         |000f: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000e
+001898: 0c00                                   |0012: move-result-object v0
+00189a: 6e10 5500 0000                         |0013: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@0055
+0018a0: 0c00                                   |0016: move-result-object v0
+0018a2: 1a02 6e00                              |0017: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@006e
+0018a6: 6e30 0800 2100                         |0019: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0008
+0018ac: 6e20 4a00 1300                         |001c: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@004a
+0018b2: 0e00                                   |001f: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=4
+        0x0007 line=136
+        0x000f line=221
+        0x0017 line=165
+        0x001c line=2
+        0x001f line=131
+      locals        : 
+        0x0000 - 0x0020 reg=3 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x0020 reg=4 arg0 Landroid/view/View; 
+
+    #2              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'getWebPage'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 33 16-bit code units
+0018b4:                                        |[0018b4] com.uaf.matt.testone.TestOneActivity.getWebPage:(Landroid/view/View;)V
+0018c4: 2201 0500                              |0000: new-instance v1, Landroid/content/Intent; // type@0005
+0018c8: 1c00 1e00                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayWebPageActivity; // type@001e
+0018cc: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+0018d2: 1400 0200 087f                         |0007: const v0, #float 180775047991567766018258608092629434368.000000 // #7f080002
+0018d8: 6e20 4300 0300                         |000a: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0043
+0018de: 0c00                                   |000d: move-result-object v0
+0018e0: 1f00 0e00                              |000e: check-cast v0, Landroid/widget/EditText; // type@000e
+0018e4: 6e10 0e00 0000                         |0010: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000e
+0018ea: 0c00                                   |0013: move-result-object v0
+0018ec: 6e10 5500 0000                         |0014: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@0055
+0018f2: 0c00                                   |0017: move-result-object v0
+0018f4: 1a02 6e00                              |0018: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@006e
+0018f8: 6e30 0800 2100                         |001a: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0008
+0018fe: 6e20 4a00 1300                         |001d: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@004a
+001904: 0e00                                   |0020: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=206
+        0x0007 line=31
+        0x0010 line=224
+        0x0018 line=146
+        0x001d line=137
+        0x0020 line=58
+      locals        : 
+        0x0000 - 0x0021 reg=3 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x0021 reg=4 arg0 Landroid/view/View; 
+
+    #3              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 10 16-bit code units
+001908:                                        |[001908] com.uaf.matt.testone.TestOneActivity.onCreate:(Landroid/os/Bundle;)V
+001918: 1400 0300 037f                         |0000: const v0, #float 174128928295052790305409996738478997504.000000 // #7f030003
+00191e: 6f20 0100 2100                         |0003: invoke-super {v1, v2}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+001924: 6e20 4900 0100                         |0006: invoke-virtual {v1, v0}, Lcom/uaf/matt/testone/TestOneActivity;.setContentView:(I)V // method@0049
+00192a: 0e00                                   |0009: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=92
+        0x0006 line=42
+        0x0009 line=188
+      locals        : 
+        0x0000 - 0x000a reg=1 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x000a reg=2 arg0 Landroid/os/Bundle; 
+
+    #4              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onCreateOptionsMenu'
+      type          : '(Landroid/view/Menu;)Z'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 3
+      insns size    : 14 16-bit code units
+00192c:                                        |[00192c] com.uaf.matt.testone.TestOneActivity.onCreateOptionsMenu:(Landroid/view/Menu;)Z
+00193c: 6e10 4400 0200                         |0000: invoke-virtual {v2}, Lcom/uaf/matt/testone/TestOneActivity;.getMenuInflater:()Landroid/view/MenuInflater; // method@0044
+001942: 0c00                                   |0003: move-result-object v0
+001944: 1501 077f                              |0004: const/high16 v1, #int 2131165184 // #7f07
+001948: 6e30 0c00 1003                         |0006: invoke-virtual {v0, v1, v3}, Landroid/view/MenuInflater;.inflate:(ILandroid/view/Menu;)V // method@000c
+00194e: 6f20 0200 3200                         |0009: invoke-super {v2, v3}, Landroid/app/Activity;.onCreateOptionsMenu:(Landroid/view/Menu;)Z // method@0002
+001954: 0a00                                   |000c: move-result v0
+001956: 0f00                                   |000d: return v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=190
+        0x0004 line=122
+        0x0009 line=14
+      locals        : 
+        0x0000 - 0x000e reg=2 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x000e reg=3 arg0 Landroid/view/Menu; 
+
+    #5              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 22 16-bit code units
+001958:                                        |[001958] com.uaf.matt.testone.TestOneActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+001968: 1210                                   |0000: const/4 v0, #int 1 // #1
+00196a: 7210 0d00 0300                         |0001: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000d
+001970: 0a01                                   |0004: move-result v1
+001972: 2b01 0900 0000                         |0005: packed-switch v1, 0000000e // +00000009
+001978: 6f20 0300 3200                         |0008: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+00197e: 0a00                                   |000b: move-result v0
+001980: 0f00                                   |000c: return v0
+001982: 0000                                   |000d: nop // spacer
+001984: 0001 0200 0300 087f 0700 0000 0700 ... |000e: packed-switch-data (8 units)
+      catches       : (none)
+      positions     : 
+        0x0001 line=85
+        0x0008 line=184
+        0x000d line=85
+      locals        : 
+        0x0000 - 0x0016 reg=2 this Lcom/uaf/matt/testone/TestOneActivity; 
+        0x0000 - 0x0016 reg=3 arg0 Landroid/view/MenuItem; 
+
+  source_file_idx   : 144 (l)
+

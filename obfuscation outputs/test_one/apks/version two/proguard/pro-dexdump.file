@@ -1,0 +1,842 @@
+Processing 'classes.dex'...
+Opened 'classes.dex', DEX version '035'
+DEX file header:
+magic               : 'dex\n035\0'
+checksum            : b6340895
+signature           : 1f2b...323b
+file_size           : 6408
+header_size         : 112
+link_size           : 0
+link_off            : 0 (0x000000)
+string_ids_size     : 116
+string_ids_off      : 112 (0x000070)
+type_ids_size       : 49
+type_ids_off        : 576 (0x000240)
+proto_ids_size       : 50
+proto_ids_off        : 772 (0x000304)
+field_ids_size      : 0
+field_ids_off       : 0 (0x000000)
+method_ids_size     : 88
+method_ids_off      : 1372 (0x00055c)
+class_defs_size     : 6
+class_defs_off      : 2076 (0x00081c)
+data_size           : 4140
+data_off            : 2268 (0x0008dc)
+
+Class #0 header:
+class_idx           : 15
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6139 (0x0017fb)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 2
+virtual_methods_size: 2
+
+Class #0            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayMathsActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0008dc:                                        |[0008dc] com.uaf.matt.testone.DisplayMathsActivity.<init>:()V
+0008ec: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+0008f2: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'a'
+      type          : '(I)I'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 5
+      ins           : 1
+      outs          : 0
+      insns size    : 13 16-bit code units
+0008f4:                                        |[0008f4] com.uaf.matt.testone.DisplayMathsActivity.a:(I)I
+000904: 1200                                   |0000: const/4 v0, #int 0 // #0
+000906: 1211                                   |0001: const/4 v1, #int 1 // #1
+000908: 0102                                   |0002: move v2, v0
+00090a: 3540 0900                              |0003: if-ge v0, v4, 000c // +0009
+00090e: b012                                   |0005: add-int/2addr v2, v1
+000910: d800 0001                              |0006: add-int/lit8 v0, v0, #int 1 // #01
+000914: 0123                                   |0008: move v3, v2
+000916: 0112                                   |0009: move v2, v1
+000918: 0131                                   |000a: move v1, v3
+00091a: 28f8                                   |000b: goto 0003 // -0008
+00091c: 0f02                                   |000c: return v2
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x0004 (PROTECTED)
+      code          -
+      registers     : 6
+      ins           : 2
+      outs          : 3
+      insns size    : 59 16-bit code units
+000920:                                        |[000920] com.uaf.matt.testone.DisplayMathsActivity.onCreate:(Landroid/os/Bundle;)V
+000930: 6f20 0100 5400                         |0000: invoke-super {v4, v5}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+000936: 1500 037f                              |0003: const/high16 v0, #int 2130903040 // #7f03
+00093a: 6e20 1600 0400                         |0005: invoke-virtual {v4, v0}, Lcom/uaf/matt/testone/DisplayMathsActivity;.setContentView:(I)V // method@0016
+000940: 6e10 1300 0400                         |0008: invoke-virtual {v4}, Lcom/uaf/matt/testone/DisplayMathsActivity;.getIntent:()Landroid/content/Intent; // method@0013
+000946: 0c00                                   |000b: move-result-object v0
+000948: 1a01 4a00                              |000c: const-string v1, "com.uaf.matt.testone.MESSAGE" // string@004a
+00094c: 1202                                   |000e: const/4 v2, #int 0 // #0
+00094e: 6e30 0500 1002                         |000f: invoke-virtual {v0, v1, v2}, Landroid/content/Intent;.getIntExtra:(Ljava/lang/String;I)I // method@0005
+000954: 0a00                                   |0012: move-result v0
+000956: 2201 0e00                              |0013: new-instance v1, Landroid/widget/TextView; // type@000e
+00095a: 7020 0e00 4100                         |0015: invoke-direct {v1, v4}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000e
+000960: 1502 2042                              |0018: const/high16 v2, #int 1109393408 // #4220
+000964: 6e20 1000 2100                         |001a: invoke-virtual {v1, v2}, Landroid/widget/TextView;.setTextSize:(F)V // method@0010
+00096a: 2202 2100                              |001d: new-instance v2, Ljava/lang/StringBuilder; // type@0021
+00096e: 7010 4400 0200                         |001f: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@0044
+000974: 1a03 0000                              |0022: const-string v3, "" // string@0000
+000978: 6e20 4600 3200                         |0024: invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+00097e: 0c02                                   |0027: move-result-object v2
+000980: 7110 1200 0000                         |0028: invoke-static {v0}, Lcom/uaf/matt/testone/DisplayMathsActivity;.a:(I)I // method@0012
+000986: 0a00                                   |002b: move-result v0
+000988: 6e20 4500 0200                         |002c: invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@0045
+00098e: 0c00                                   |002f: move-result-object v0
+000990: 6e10 4700 0000                         |0030: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0047
+000996: 0c00                                   |0033: move-result-object v0
+000998: 6e20 0f00 0100                         |0034: invoke-virtual {v1, v0}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@000f
+00099e: 6e20 1700 1400                         |0037: invoke-virtual {v4, v1}, Lcom/uaf/matt/testone/DisplayMathsActivity;.setContentView:(Landroid/view/View;)V // method@0017
+0009a4: 0e00                                   |003a: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMathsActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+0009a8:                                        |[0009a8] com.uaf.matt.testone.DisplayMathsActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+0009b8: 7210 0c00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000c
+0009be: 0a00                                   |0003: move-result v0
+0009c0: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+0009c6: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+0009ca: 1210                                   |0009: const/4 v0, #int 1 // #1
+0009cc: 0f00                                   |000a: return v0
+0009ce: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+0009d4: 0a00                                   |000e: move-result v0
+0009d6: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  source_file_idx   : -1 (unknown)
+
+Class #1 header:
+class_idx           : 16
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6161 (0x001811)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 2
+
+Class #1            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayMessageActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0009d8:                                        |[0009d8] com.uaf.matt.testone.DisplayMessageActivity.<init>:()V
+0009e8: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+0009ee: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x0004 (PROTECTED)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 75 16-bit code units
+0009f0:                                        |[0009f0] com.uaf.matt.testone.DisplayMessageActivity.onCreate:(Landroid/os/Bundle;)V
+000a00: 6f20 0100 6500                         |0000: invoke-super {v5, v6}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+000a06: 1400 0100 037f                         |0003: const v0, #float 174128887730233583002069148843976425472.000000 // #7f030001
+000a0c: 6e20 1c00 0500                         |0006: invoke-virtual {v5, v0}, Lcom/uaf/matt/testone/DisplayMessageActivity;.setContentView:(I)V // method@001c
+000a12: 6e10 1900 0500                         |0009: invoke-virtual {v5}, Lcom/uaf/matt/testone/DisplayMessageActivity;.getIntent:()Landroid/content/Intent; // method@0019
+000a18: 0c00                                   |000c: move-result-object v0
+000a1a: 1a01 4a00                              |000d: const-string v1, "com.uaf.matt.testone.MESSAGE" // string@004a
+000a1e: 6e20 0600 1000                         |000f: invoke-virtual {v0, v1}, Landroid/content/Intent;.getStringExtra:(Ljava/lang/String;)Ljava/lang/String; // method@0006
+000a24: 0c00                                   |0012: move-result-object v0
+000a26: 1a01 3c00                              |0013: const-string v1, "Super-Secret-Password" // string@003c
+000a2a: 2202 0e00                              |0015: new-instance v2, Landroid/widget/TextView; // type@000e
+000a2e: 7020 0e00 5200                         |0017: invoke-direct {v2, v5}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000e
+000a34: 1503 a041                              |001a: const/high16 v3, #int 1101004800 // #41a0
+000a38: 6e20 1000 3200                         |001c: invoke-virtual {v2, v3}, Landroid/widget/TextView;.setTextSize:(F)V // method@0010
+000a3e: 7110 2f00 0000                         |001f: invoke-static {v0}, Lcom/uaf/matt/testone/a;.a:(Ljava/lang/String;)Ljava/lang/String; // method@002f
+000a44: 0c03                                   |0022: move-result-object v3
+000a46: 7120 3000 3100                         |0023: invoke-static {v1, v3}, Lcom/uaf/matt/testone/a;.a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; // method@0030
+000a4c: 0c01                                   |0026: move-result-object v1
+000a4e: 2203 2100                              |0027: new-instance v3, Ljava/lang/StringBuilder; // type@0021
+000a52: 7010 4400 0300                         |0029: invoke-direct {v3}, Ljava/lang/StringBuilder;.<init>:()V // method@0044
+000a58: 1a04 3a00                              |002c: const-string v4, "Message before encryption: " // string@003a
+000a5c: 6e20 4600 4300                         |002e: invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000a62: 0c03                                   |0031: move-result-object v3
+000a64: 6e20 4600 0300                         |0032: invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000a6a: 0c00                                   |0035: move-result-object v0
+000a6c: 1a03 0100                              |0036: const-string v3, "
+Message after encryption: " // string@0001
+000a70: 6e20 4600 3000                         |0038: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000a76: 0c00                                   |003b: move-result-object v0
+000a78: 6e20 4600 1000                         |003c: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000a7e: 0c00                                   |003f: move-result-object v0
+000a80: 6e10 4700 0000                         |0040: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0047
+000a86: 0c00                                   |0043: move-result-object v0
+000a88: 6e20 0f00 0200                         |0044: invoke-virtual {v2, v0}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@000f
+000a8e: 6e20 1d00 2500                         |0047: invoke-virtual {v5, v2}, Lcom/uaf/matt/testone/DisplayMessageActivity;.setContentView:(Landroid/view/View;)V // method@001d
+000a94: 0e00                                   |004a: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayMessageActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+000a98:                                        |[000a98] com.uaf.matt.testone.DisplayMessageActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+000aa8: 7210 0c00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000c
+000aae: 0a00                                   |0003: move-result v0
+000ab0: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+000ab6: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+000aba: 1210                                   |0009: const/4 v0, #int 1 // #1
+000abc: 0f00                                   |000a: return v0
+000abe: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+000ac4: 0a00                                   |000e: move-result v0
+000ac6: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  source_file_idx   : -1 (unknown)
+
+Class #2 header:
+class_idx           : 17
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6179 (0x001823)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 2
+
+Class #2            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/DisplayWebPageActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000ac8:                                        |[000ac8] com.uaf.matt.testone.DisplayWebPageActivity.<init>:()V
+000ad8: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+000ade: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x0004 (PROTECTED)
+      code          -
+      registers     : 10
+      ins           : 2
+      outs          : 2
+      insns size    : 74 16-bit code units
+000ae0:                                        |[000ae0] com.uaf.matt.testone.DisplayWebPageActivity.onCreate:(Landroid/os/Bundle;)V
+000af0: 6f20 0100 9800                         |0000: invoke-super {v8, v9}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+000af6: 1400 0200 037f                         |0003: const v0, #float 174128908012643186653739572791227711488.000000 // #7f030002
+000afc: 6e20 2200 0800                         |0006: invoke-virtual {v8, v0}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.setContentView:(I)V // method@0022
+000b02: 6e10 1f00 0800                         |0009: invoke-virtual {v8}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.getIntent:()Landroid/content/Intent; // method@001f
+000b08: 0c00                                   |000c: move-result-object v0
+000b0a: 2201 0e00                              |000d: new-instance v1, Landroid/widget/TextView; // type@000e
+000b0e: 7020 0e00 8100                         |000f: invoke-direct {v1, v8}, Landroid/widget/TextView;.<init>:(Landroid/content/Context;)V // method@000e
+000b14: 1502 2041                              |0012: const/high16 v2, #int 1092616192 // #4120
+000b18: 6e20 1000 2100                         |0014: invoke-virtual {v1, v2}, Landroid/widget/TextView;.setTextSize:(F)V // method@0010
+000b1e: 1a02 4a00                              |0017: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@004a
+000b22: 6e20 0600 2000                         |0019: invoke-virtual {v0, v2}, Landroid/content/Intent;.getStringExtra:(Ljava/lang/String;)Ljava/lang/String; // method@0006
+000b28: 0c00                                   |001c: move-result-object v0
+000b2a: 1a02 0200                              |001d: const-string v2, "0" // string@0002
+000b2e: 2203 1400                              |001f: new-instance v3, Lcom/uaf/matt/testone/b; // type@0014
+000b32: 7010 3300 0300                         |0021: invoke-direct {v3}, Lcom/uaf/matt/testone/b;.<init>:()V // method@0033
+000b38: 1224                                   |0024: const/4 v4, #int 2 // #2
+000b3a: 2344 3000                              |0025: new-array v4, v4, [Ljava/lang/String; // type@0030
+000b3e: 1205                                   |0027: const/4 v5, #int 0 // #0
+000b40: 2206 2100                              |0028: new-instance v6, Ljava/lang/StringBuilder; // type@0021
+000b44: 7010 4400 0600                         |002a: invoke-direct {v6}, Ljava/lang/StringBuilder;.<init>:()V // method@0044
+000b4a: 1a07 6000                              |002d: const-string v7, "http://www.google.com/search?q=" // string@0060
+000b4e: 6e20 4600 7600                         |002f: invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000b54: 0c06                                   |0032: move-result-object v6
+000b56: 6e20 4600 0600                         |0033: invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000b5c: 0c00                                   |0036: move-result-object v0
+000b5e: 6e10 4700 0000                         |0037: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0047
+000b64: 0c00                                   |003a: move-result-object v0
+000b66: 4d00 0405                              |003b: aput-object v0, v4, v5
+000b6a: 1210                                   |003d: const/4 v0, #int 1 // #1
+000b6c: 4d02 0400                              |003e: aput-object v2, v4, v0
+000b70: 6e20 3600 4300                         |0040: invoke-virtual {v3, v4}, Lcom/uaf/matt/testone/b;.execute:([Ljava/lang/Object;)Landroid/os/AsyncTask; // method@0036
+000b76: 6e20 0f00 2100                         |0043: invoke-virtual {v1, v2}, Landroid/widget/TextView;.setText:(Ljava/lang/CharSequence;)V // method@000f
+000b7c: 6e20 2300 1800                         |0046: invoke-virtual {v8, v1}, Lcom/uaf/matt/testone/DisplayWebPageActivity;.setContentView:(Landroid/view/View;)V // method@0023
+000b82: 0e00                                   |0049: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/DisplayWebPageActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 16 16-bit code units
+000b84:                                        |[000b84] com.uaf.matt.testone.DisplayWebPageActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+000b94: 7210 0c00 0300                         |0000: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000c
+000b9a: 0a00                                   |0003: move-result v0
+000b9c: 1401 0400 087f                         |0004: const v1, #float 180775088556386973321599455987132006400.000000 // #7f080004
+000ba2: 3310 0400                              |0007: if-ne v0, v1, 000b // +0004
+000ba6: 1210                                   |0009: const/4 v0, #int 1 // #1
+000ba8: 0f00                                   |000a: return v0
+000baa: 6f20 0300 3200                         |000b: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+000bb0: 0a00                                   |000e: move-result v0
+000bb2: 28fb                                   |000f: goto 000a // -0005
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  source_file_idx   : -1 (unknown)
+
+Class #3 header:
+class_idx           : 18
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6197 (0x001835)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 6
+
+Class #3            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/TestOneActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000bb4:                                        |[000bb4] com.uaf.matt.testone.TestOneActivity.<init>:()V
+000bc4: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+000bca: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'doMaths'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 37 16-bit code units
+000bcc:                                        |[000bcc] com.uaf.matt.testone.TestOneActivity.doMaths:(Landroid/view/View;)V
+000bdc: 2201 0400                              |0000: new-instance v1, Landroid/content/Intent; // type@0004
+000be0: 1c00 0f00                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayMathsActivity; // type@000f
+000be4: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+000bea: 1400 0100 087f                         |0007: const v0, #float 180775027709158162366588184145378148352.000000 // #7f080001
+000bf0: 6e20 2700 0300                         |000a: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0027
+000bf6: 0c00                                   |000d: move-result-object v0
+000bf8: 1f00 0d00                              |000e: check-cast v0, Landroid/widget/EditText; // type@000d
+000bfc: 6e10 0d00 0000                         |0010: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000d
+000c02: 0c00                                   |0013: move-result-object v0
+000c04: 6e10 3e00 0000                         |0014: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@003e
+000c0a: 0c00                                   |0017: move-result-object v0
+000c0c: 7110 3c00 0000                         |0018: invoke-static {v0}, Ljava/lang/Integer;.parseInt:(Ljava/lang/String;)I // method@003c
+000c12: 0a00                                   |001b: move-result v0
+000c14: 1a02 4a00                              |001c: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@004a
+000c18: 6e30 0700 2100                         |001e: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;I)Landroid/content/Intent; // method@0007
+000c1e: 6e20 2e00 1300                         |0021: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@002e
+000c24: 0e00                                   |0024: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'encryptMessage'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 32 16-bit code units
+000c28:                                        |[000c28] com.uaf.matt.testone.TestOneActivity.encryptMessage:(Landroid/view/View;)V
+000c38: 2201 0400                              |0000: new-instance v1, Landroid/content/Intent; // type@0004
+000c3c: 1c00 1000                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayMessageActivity; // type@0010
+000c40: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+000c46: 1500 087f                              |0007: const/high16 v0, #int 2131230720 // #7f08
+000c4a: 6e20 2700 0300                         |0009: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0027
+000c50: 0c00                                   |000c: move-result-object v0
+000c52: 1f00 0d00                              |000d: check-cast v0, Landroid/widget/EditText; // type@000d
+000c56: 6e10 0d00 0000                         |000f: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000d
+000c5c: 0c00                                   |0012: move-result-object v0
+000c5e: 6e10 3e00 0000                         |0013: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@003e
+000c64: 0c00                                   |0016: move-result-object v0
+000c66: 1a02 4a00                              |0017: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@004a
+000c6a: 6e30 0800 2100                         |0019: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0008
+000c70: 6e20 2e00 1300                         |001c: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@002e
+000c76: 0e00                                   |001f: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #2              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'getWebPage'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 33 16-bit code units
+000c78:                                        |[000c78] com.uaf.matt.testone.TestOneActivity.getWebPage:(Landroid/view/View;)V
+000c88: 2201 0400                              |0000: new-instance v1, Landroid/content/Intent; // type@0004
+000c8c: 1c00 1100                              |0002: const-class v0, Lcom/uaf/matt/testone/DisplayWebPageActivity; // type@0011
+000c90: 7030 0400 3100                         |0004: invoke-direct {v1, v3, v0}, Landroid/content/Intent;.<init>:(Landroid/content/Context;Ljava/lang/Class;)V // method@0004
+000c96: 1400 0200 087f                         |0007: const v0, #float 180775047991567766018258608092629434368.000000 // #7f080002
+000c9c: 6e20 2700 0300                         |000a: invoke-virtual {v3, v0}, Lcom/uaf/matt/testone/TestOneActivity;.findViewById:(I)Landroid/view/View; // method@0027
+000ca2: 0c00                                   |000d: move-result-object v0
+000ca4: 1f00 0d00                              |000e: check-cast v0, Landroid/widget/EditText; // type@000d
+000ca8: 6e10 0d00 0000                         |0010: invoke-virtual {v0}, Landroid/widget/EditText;.getText:()Landroid/text/Editable; // method@000d
+000cae: 0c00                                   |0013: move-result-object v0
+000cb0: 6e10 3e00 0000                         |0014: invoke-virtual {v0}, Ljava/lang/Object;.toString:()Ljava/lang/String; // method@003e
+000cb6: 0c00                                   |0017: move-result-object v0
+000cb8: 1a02 4a00                              |0018: const-string v2, "com.uaf.matt.testone.MESSAGE" // string@004a
+000cbc: 6e30 0800 2100                         |001a: invoke-virtual {v1, v2, v0}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0008
+000cc2: 6e20 2e00 1300                         |001d: invoke-virtual {v3, v1}, Lcom/uaf/matt/testone/TestOneActivity;.startActivity:(Landroid/content/Intent;)V // method@002e
+000cc8: 0e00                                   |0020: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #3              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 10 16-bit code units
+000ccc:                                        |[000ccc] com.uaf.matt.testone.TestOneActivity.onCreate:(Landroid/os/Bundle;)V
+000cdc: 6f20 0100 2100                         |0000: invoke-super {v1, v2}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+000ce2: 1400 0300 037f                         |0003: const v0, #float 174128928295052790305409996738478997504.000000 // #7f030003
+000ce8: 6e20 2d00 0100                         |0006: invoke-virtual {v1, v0}, Lcom/uaf/matt/testone/TestOneActivity;.setContentView:(I)V // method@002d
+000cee: 0e00                                   |0009: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #4              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onCreateOptionsMenu'
+      type          : '(Landroid/view/Menu;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 3
+      insns size    : 14 16-bit code units
+000cf0:                                        |[000cf0] com.uaf.matt.testone.TestOneActivity.onCreateOptionsMenu:(Landroid/view/Menu;)Z
+000d00: 6e10 2800 0200                         |0000: invoke-virtual {v2}, Lcom/uaf/matt/testone/TestOneActivity;.getMenuInflater:()Landroid/view/MenuInflater; // method@0028
+000d06: 0c00                                   |0003: move-result-object v0
+000d08: 1501 077f                              |0004: const/high16 v1, #int 2131165184 // #7f07
+000d0c: 6e30 0b00 1003                         |0006: invoke-virtual {v0, v1, v3}, Landroid/view/MenuInflater;.inflate:(ILandroid/view/Menu;)V // method@000b
+000d12: 6f20 0200 3200                         |0009: invoke-super {v2, v3}, Landroid/app/Activity;.onCreateOptionsMenu:(Landroid/view/Menu;)Z // method@0002
+000d18: 0a00                                   |000c: move-result v0
+000d1a: 0f00                                   |000d: return v0
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #5              : (in Lcom/uaf/matt/testone/TestOneActivity;)
+      name          : 'onOptionsItemSelected'
+      type          : '(Landroid/view/MenuItem;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 22 16-bit code units
+000d1c:                                        |[000d1c] com.uaf.matt.testone.TestOneActivity.onOptionsItemSelected:(Landroid/view/MenuItem;)Z
+000d2c: 1210                                   |0000: const/4 v0, #int 1 // #1
+000d2e: 7210 0c00 0300                         |0001: invoke-interface {v3}, Landroid/view/MenuItem;.getItemId:()I // method@000c
+000d34: 0a01                                   |0004: move-result v1
+000d36: 2b01 0900 0000                         |0005: packed-switch v1, 0000000e // +00000009
+000d3c: 6f20 0300 3200                         |0008: invoke-super {v2, v3}, Landroid/app/Activity;.onOptionsItemSelected:(Landroid/view/MenuItem;)Z // method@0003
+000d42: 0a00                                   |000b: move-result v0
+000d44: 0f00                                   |000c: return v0
+000d46: 0000                                   |000d: nop // spacer
+000d48: 0001 0200 0300 087f 0700 0000 0700 ... |000e: packed-switch-data (8 units)
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  source_file_idx   : -1 (unknown)
+
+Class #4 header:
+class_idx           : 19
+access_flags        : 1 (0x0001)
+superclass_idx      : 30
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6231 (0x001857)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 4
+virtual_methods_size: 0
+
+Class #4            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/a;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/a;)
+      name          : 'a'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+      code          -
+      registers     : 7
+      ins           : 1
+      outs          : 2
+      insns size    : 81 16-bit code units
+000d58:                                        |[000d58] com.uaf.matt.testone.a.a:(Ljava/lang/String;)Ljava/lang/String;
+000d68: 1a00 3900                              |0000: const-string v0, "MD5" // string@0039
+000d6c: 7110 4c00 0000                         |0002: invoke-static {v0}, Ljava/security/MessageDigest;.getInstance:(Ljava/lang/String;)Ljava/security/MessageDigest; // method@004c
+000d72: 0c00                                   |0005: move-result-object v0
+000d74: 6e10 3f00 0600                         |0006: invoke-virtual {v6}, Ljava/lang/String;.getBytes:()[B // method@003f
+000d7a: 0c01                                   |0009: move-result-object v1
+000d7c: 6e20 4d00 1000                         |000a: invoke-virtual {v0, v1}, Ljava/security/MessageDigest;.update:([B)V // method@004d
+000d82: 6e10 4b00 0000                         |000d: invoke-virtual {v0}, Ljava/security/MessageDigest;.digest:()[B // method@004b
+000d88: 0c02                                   |0010: move-result-object v2
+000d8a: 2203 2000                              |0011: new-instance v3, Ljava/lang/StringBuffer; // type@0020
+000d8e: 7010 4100 0300                         |0013: invoke-direct {v3}, Ljava/lang/StringBuffer;.<init>:()V // method@0041
+000d94: 1200                                   |0016: const/4 v0, #int 0 // #0
+000d96: 0101                                   |0017: move v1, v0
+000d98: 2120                                   |0018: array-length v0, v2
+000d9a: 3501 2c00                              |0019: if-ge v1, v0, 0045 // +002c
+000d9e: 4800 0201                              |001b: aget-byte v0, v2, v1
+000da2: d500 ff00                              |001d: and-int/lit16 v0, v0, #int 255 // #00ff
+000da6: 7110 3d00 0000                         |001f: invoke-static {v0}, Ljava/lang/Integer;.toHexString:(I)Ljava/lang/String; // method@003d
+000dac: 0c00                                   |0022: move-result-object v0
+000dae: 6e10 4000 0000                         |0023: invoke-virtual {v0}, Ljava/lang/String;.length:()I // method@0040
+000db4: 0a04                                   |0026: move-result v4
+000db6: 1225                                   |0027: const/4 v5, #int 2 // #2
+000db8: 3554 1600                              |0028: if-ge v4, v5, 003e // +0016
+000dbc: 2204 2100                              |002a: new-instance v4, Ljava/lang/StringBuilder; // type@0021
+000dc0: 7010 4400 0400                         |002c: invoke-direct {v4}, Ljava/lang/StringBuilder;.<init>:()V // method@0044
+000dc6: 1a05 0200                              |002f: const-string v5, "0" // string@0002
+000dca: 6e20 4600 5400                         |0031: invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000dd0: 0c04                                   |0034: move-result-object v4
+000dd2: 6e20 4600 0400                         |0035: invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000dd8: 0c00                                   |0038: move-result-object v0
+000dda: 6e10 4700 0000                         |0039: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0047
+000de0: 0c00                                   |003c: move-result-object v0
+000de2: 28e6                                   |003d: goto 0023 // -001a
+000de4: 6e20 4200 0300                         |003e: invoke-virtual {v3, v0}, Ljava/lang/StringBuffer;.append:(Ljava/lang/String;)Ljava/lang/StringBuffer; // method@0042
+000dea: d800 0101                              |0041: add-int/lit8 v0, v1, #int 1 // #01
+000dee: 0101                                   |0043: move v1, v0
+000df0: 28d4                                   |0044: goto 0018 // -002c
+000df2: 6e10 4300 0300                         |0045: invoke-virtual {v3}, Ljava/lang/StringBuffer;.toString:()Ljava/lang/String; // method@0043
+000df8: 0c00                                   |0048: move-result-object v0
+000dfa: 1100                                   |0049: return-object v0
+000dfc: 0d00                                   |004a: move-exception v0
+000dfe: 6e10 3b00 0000                         |004b: invoke-virtual {v0}, Ljava/lang/Exception;.printStackTrace:()V // method@003b
+000e04: 1a00 5100                              |004e: const-string v0, "error" // string@0051
+000e08: 28f9                                   |0050: goto 0049 // -0007
+      catches       : 1
+        0x0000 - 0x0048
+          Ljava/lang/Exception; -> 0x004a
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/a;)
+      name          : 'a'
+      type          : '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 29 16-bit code units
+000e18:                                        |[000e18] com.uaf.matt.testone.a.a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+000e28: 6e10 3f00 0200                         |0000: invoke-virtual {v2}, Ljava/lang/String;.getBytes:()[B // method@003f
+000e2e: 0c00                                   |0003: move-result-object v0
+000e30: 7110 3100 0000                         |0004: invoke-static {v0}, Lcom/uaf/matt/testone/a;.a:([B)[B // method@0031
+000e36: 0c00                                   |0007: move-result-object v0
+000e38: 6e10 3f00 0300                         |0008: invoke-virtual {v3}, Ljava/lang/String;.getBytes:()[B // method@003f
+000e3e: 0c01                                   |000b: move-result-object v1
+000e40: 7120 3200 1000                         |000c: invoke-static {v0, v1}, Lcom/uaf/matt/testone/a;.a:([B[B)[B // method@0032
+000e46: 0c00                                   |000f: move-result-object v0
+000e48: 1201                                   |0010: const/4 v1, #int 0 // #0
+000e4a: 7120 0a00 1000                         |0011: invoke-static {v0, v1}, Landroid/util/Base64;.encodeToString:([BI)Ljava/lang/String; // method@000a
+000e50: 0c00                                   |0014: move-result-object v0
+000e52: 1100                                   |0015: return-object v0
+000e54: 0d00                                   |0016: move-exception v0
+000e56: 6e10 3b00 0000                         |0017: invoke-virtual {v0}, Ljava/lang/Exception;.printStackTrace:()V // method@003b
+000e5c: 1a00 5100                              |001a: const-string v0, "error" // string@0051
+000e60: 28f9                                   |001c: goto 0015 // -0007
+      catches       : 1
+        0x0000 - 0x0014
+          Ljava/lang/Exception; -> 0x0016
+      positions     : 
+      locals        : 
+
+    #2              : (in Lcom/uaf/matt/testone/a;)
+      name          : 'a'
+      type          : '([B)[B'
+      access        : 0x000a (PRIVATE STATIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 3
+      insns size    : 29 16-bit code units
+000e70:                                        |[000e70] com.uaf.matt.testone.a.a:([B)[B
+000e80: 1a00 0400                              |0000: const-string v0, "AES" // string@0004
+000e84: 7110 5400 0000                         |0002: invoke-static {v0}, Ljavax/crypto/KeyGenerator;.getInstance:(Ljava/lang/String;)Ljavax/crypto/KeyGenerator; // method@0054
+000e8a: 0c00                                   |0005: move-result-object v0
+000e8c: 1a01 3b00                              |0006: const-string v1, "SHA1PRNG" // string@003b
+000e90: 7110 4e00 0100                         |0008: invoke-static {v1}, Ljava/security/SecureRandom;.getInstance:(Ljava/lang/String;)Ljava/security/SecureRandom; // method@004e
+000e96: 0c01                                   |000b: move-result-object v1
+000e98: 6e20 4f00 3100                         |000c: invoke-virtual {v1, v3}, Ljava/security/SecureRandom;.setSeed:([B)V // method@004f
+000e9e: 1302 8000                              |000f: const/16 v2, #int 128 // #80
+000ea2: 6e30 5500 2001                         |0011: invoke-virtual {v0, v2, v1}, Ljavax/crypto/KeyGenerator;.init:(ILjava/security/SecureRandom;)V // method@0055
+000ea8: 6e10 5300 0000                         |0014: invoke-virtual {v0}, Ljavax/crypto/KeyGenerator;.generateKey:()Ljavax/crypto/SecretKey; // method@0053
+000eae: 0c00                                   |0017: move-result-object v0
+000eb0: 7210 5600 0000                         |0018: invoke-interface {v0}, Ljavax/crypto/SecretKey;.getEncoded:()[B // method@0056
+000eb6: 0c00                                   |001b: move-result-object v0
+000eb8: 1100                                   |001c: return-object v0
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+    #3              : (in Lcom/uaf/matt/testone/a;)
+      name          : 'a'
+      type          : '([B[B)[B'
+      access        : 0x000a (PRIVATE STATIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 22 16-bit code units
+000ebc:                                        |[000ebc] com.uaf.matt.testone.a.a:([B[B)[B
+000ecc: 2200 2b00                              |0000: new-instance v0, Ljavax/crypto/spec/SecretKeySpec; // type@002b
+000ed0: 1a01 0400                              |0002: const-string v1, "AES" // string@0004
+000ed4: 7030 5700 3001                         |0004: invoke-direct {v0, v3, v1}, Ljavax/crypto/spec/SecretKeySpec;.<init>:([BLjava/lang/String;)V // method@0057
+000eda: 1a01 0400                              |0007: const-string v1, "AES" // string@0004
+000ede: 7110 5100 0100                         |0009: invoke-static {v1}, Ljavax/crypto/Cipher;.getInstance:(Ljava/lang/String;)Ljavax/crypto/Cipher; // method@0051
+000ee4: 0c01                                   |000c: move-result-object v1
+000ee6: 1212                                   |000d: const/4 v2, #int 1 // #1
+000ee8: 6e30 5200 2100                         |000e: invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;.init:(ILjava/security/Key;)V // method@0052
+000eee: 6e20 5000 4100                         |0011: invoke-virtual {v1, v4}, Ljavax/crypto/Cipher;.doFinal:([B)[B // method@0050
+000ef4: 0c00                                   |0014: move-result-object v0
+000ef6: 1100                                   |0015: return-object v0
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+  source_file_idx   : -1 (unknown)
+
+Class #5 header:
+class_idx           : 20
+access_flags        : 0 (0x0000)
+superclass_idx      : 5
+interfaces_off      : 0 (0x000000)
+source_file_idx     : -1
+annotations_off     : 0 (0x000000)
+class_data_off      : 6251 (0x00186b)
+static_fields_size  : 0
+instance_fields_size: 0
+direct_methods_size : 1
+virtual_methods_size: 2
+
+Class #5            -
+  Class descriptor  : 'Lcom/uaf/matt/testone/b;'
+  Access flags      : 0x0000 ()
+  Superclass        : 'Landroid/os/AsyncTask;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/uaf/matt/testone/b;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000ef8:                                        |[000ef8] com.uaf.matt.testone.b.<init>:()V
+000f08: 7010 0900 0000                         |0000: invoke-direct {v0}, Landroid/os/AsyncTask;.<init>:()V // method@0009
+000f0e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  Virtual methods   -
+    #0              : (in Lcom/uaf/matt/testone/b;)
+      name          : 'a'
+      type          : '([Ljava/lang/String;)Ljava/lang/Void;'
+      access        : 0x0081 (PUBLIC VARARGS)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 63 16-bit code units
+000f10:                                        |[000f10] com.uaf.matt.testone.b.a:([Ljava/lang/String;)Ljava/lang/Void;
+000f20: 2200 2300                              |0000: new-instance v0, Ljava/net/URL; // type@0023
+000f24: 1201                                   |0002: const/4 v1, #int 0 // #0
+000f26: 4601 0601                              |0003: aget-object v1, v6, v1
+000f2a: 7020 4800 1000                         |0005: invoke-direct {v0, v1}, Ljava/net/URL;.<init>:(Ljava/lang/String;)V // method@0048
+000f30: 6e10 4900 0000                         |0008: invoke-virtual {v0}, Ljava/net/URL;.openConnection:()Ljava/net/URLConnection; // method@0049
+000f36: 0c00                                   |000b: move-result-object v0
+000f38: 2201 1500                              |000c: new-instance v1, Ljava/io/BufferedReader; // type@0015
+000f3c: 2202 1800                              |000e: new-instance v2, Ljava/io/InputStreamReader; // type@0018
+000f40: 6e10 4a00 0000                         |0010: invoke-virtual {v0}, Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream; // method@004a
+000f46: 0c00                                   |0013: move-result-object v0
+000f48: 7020 3a00 0200                         |0014: invoke-direct {v2, v0}, Ljava/io/InputStreamReader;.<init>:(Ljava/io/InputStream;)V // method@003a
+000f4e: 7020 3700 2100                         |0017: invoke-direct {v1, v2}, Ljava/io/BufferedReader;.<init>:(Ljava/io/Reader;)V // method@0037
+000f54: 1a00 0000                              |001a: const-string v0, "" // string@0000
+000f58: 6e10 3800 0100                         |001c: invoke-virtual {v1}, Ljava/io/BufferedReader;.readLine:()Ljava/lang/String; // method@0038
+000f5e: 0c00                                   |001f: move-result-object v0
+000f60: 3800 1d00                              |0020: if-eqz v0, 003d // +001d
+000f64: 2202 2100                              |0022: new-instance v2, Ljava/lang/StringBuilder; // type@0021
+000f68: 7010 4400 0200                         |0024: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@0044
+000f6e: 1213                                   |0027: const/4 v3, #int 1 // #1
+000f70: 4604 0603                              |0028: aget-object v4, v6, v3
+000f74: 6e20 4600 4200                         |002a: invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000f7a: 0c02                                   |002d: move-result-object v2
+000f7c: 6e20 4600 0200                         |002e: invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0046
+000f82: 0c00                                   |0031: move-result-object v0
+000f84: 6e10 4700 0000                         |0032: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0047
+000f8a: 0c00                                   |0035: move-result-object v0
+000f8c: 4d00 0603                              |0036: aput-object v0, v6, v3
+000f90: 28e4                                   |0038: goto 001c // -001c
+000f92: 0d00                                   |0039: move-exception v0
+000f94: 6e10 3900 0000                         |003a: invoke-virtual {v0}, Ljava/io/IOException;.printStackTrace:()V // method@0039
+000f9a: 1200                                   |003d: const/4 v0, #int 0 // #0
+000f9c: 1100                                   |003e: return-object v0
+      catches       : 1
+        0x0000 - 0x0038
+          Ljava/io/IOException; -> 0x0039
+      positions     : 
+      locals        : 
+
+    #1              : (in Lcom/uaf/matt/testone/b;)
+      name          : 'doInBackground'
+      type          : '([Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x1001 (PUBLIC SYNTHETIC)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 7 16-bit code units
+000fac:                                        |[000fac] com.uaf.matt.testone.b.doInBackground:([Ljava/lang/Object;)Ljava/lang/Object;
+000fbc: 1f02 3000                              |0000: check-cast v2, [Ljava/lang/String; // type@0030
+000fc0: 6e20 3400 2100                         |0002: invoke-virtual {v1, v2}, Lcom/uaf/matt/testone/b;.a:([Ljava/lang/String;)Ljava/lang/Void; // method@0034
+000fc6: 0c00                                   |0005: move-result-object v0
+000fc8: 1100                                   |0006: return-object v0
+      catches       : (none)
+      positions     : 
+      locals        : 
+
+  source_file_idx   : -1 (unknown)
+

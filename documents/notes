@@ -1,0 +1,155 @@
+* Two Versions to test with:
+* version one, the fib is calculated with this function:
+    public static int fib(int n) {
+        int prev1=0, prev2=1;
+        for(int i=0; i<n; i++) {
+            int savePrev1 = prev1;
+            prev1 = prev2;
+            prev2 = savePrev1 + prev2;
+            }
+        return prev1;
+    }
+* with overflow
+
+* version two the fib is calculated with this function:
+    private static ArrayList<BigInteger> fibCache = new ArrayList<BigInteger>();
+    static {
+        fibCache.add(BigInteger.ZERO);
+        fibCache.add(BigInteger.ONE);
+    }
+    public static BigInteger fib(int n) {
+        if (n >= fibCache.size()) {
+            fibCache.add(n, fib(n-1).add(fib(n-2)));
+        }
+        return fibCache.get(n);
+    }
+* without overflow
+
+
+* to biuld from source with gradle
+* in /home/matt/AndroidStudioProjects/TestOne
+* run gradlew
+./gradlew build
+* resulting apk will be located in:
+app/build/outputs/apk/
+
+* to build from source with ant
+ant release
+* resulting apk will be located in:
+bin/
+
+* to extract apks
+unzip *.apk
+
+* to get raw hex files
+xxd classes.dex > *-rawdump.file
+
+* to get the dexdump information
+~/Documents/grad\ project/sdk/build-tools/21.1.0/dexdump -d -f -h classes.dex > *-dexdump.file
+
+* create jar file
+jar cf *
+
+* to extract jar
+jar xf *
+
+* dex to jar
+~/Documents/grad\ project/dex2jar/d2j-dex2jar.sh *
+
+* jar to dex
+~/Documents/grad\ project/dex2jar/d2j-jar2dex.sh *
+
+
+
+**** JARG ****
+* to run jarg errors out without -nobco flag
+java -jar ~/Documents/grad\ project/obfuscators/jarg/jarg.jar -nobco *.jar
+**** JARG ****
+	**** Works ****
+
+**** CLASSENCRYPT ****
+* running classencrypt does not seem to work with my android application
+* and with no real help on their page I cannot fix what the problem is
+* because of this I will not be using classencrypt anymore
+**** CLASSENCRYPT ****
+	**** Does not Work ****
+
+**** JODE ****
+*JODE - does not seem to work, every option I choose it creates
+* just the jar archive and nothing else so this one is being
+* skipped as well
+java -cp jode-1.1.2-pre1.jar jode.obfuscator.Main script
+**** JODE ****
+	**** Does not Work ****
+
+**** JBCO ****
+* in sootall/soot-2.5.0/lib run for GUI
+java -cp soot-2.5.0.jar soot.jbco.gui.JBCOViewer
+* for command line
+java -cp soot-2.5.0.jar soot.jbco.Main
+* not going to use because it is not for commercial use
+**** JBCO ****
+	**** Does not Work ****
+
+**** KlassMaster ****
+* created a script for it to use based on the progard settings
+* to run copied the ZKM.jar file into the folder
+* Documents/grad project/sdk/tools/proguard/
+* changed the proguard.jar name to proguard.jar.bak
+* changed ZKM.jar to proguard.jar
+* this allows for the execution of the ZKM obfuscator
+* ZKM.jar looks for the file ZKMScript.txt in the same directory where ant is being run
+**** KlassMaster ****
+	**** Works ****
+
+**** Allatori ****
+* added allatori to the ant build script to be run allong side ant
+* edited the allatori.xml file to adjust the obfuscation levels
+**** Allatori ****
+	***** Works ****
+
+
+**** Notes on Obfuscation ****
+
+** Proguard **
+no BuildConfig class
+source_file_idx is set to -1 (indicating that there is no information for this value)
+annotations_off is set to 0
+no positions defined
+no locals defined
+** Proguard **
+
+** JARG **
+BuildConfig class present
+source_file_idx set to -1
+annotations_off is set to 0
+no positions defined
+no locals defined
+** JARG **
+
+** KlassMaster **
+no BuildConfig class
+source_file_idx set to -1
+no positions defined
+no locals defined
+renames classes
+	* so far class Lf; = displayMathsActivity
+	*              Lb; = displayWebPageActivity
+does string encryption
+** KlassMaster **
+
+** Allatori **
+no build config class
+	added several extra static fields to the class
+	all named with a random alphabet character
+every class/filed/method access type is now synthetic
+class renamed Lcom/package/*
+positions for each class have changed
+	from being sequential to random number
+string encryption
+all the classes are still there
+** Allatori **
+
+* at this point it was decided that I need to build the apks with ant due to it bringing in the support classes
+* and it working with all of the obfuscators
+

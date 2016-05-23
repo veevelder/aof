@@ -1,0 +1,69 @@
+\section{Android Obfuscation Fingerprinting Tool}
+In order to automate the process of finding which obfuscator was used on the Android application, a Python program was developed. This program, titled aof.py \cite{aofgit}, can be seen in Appendix \ref{app:aof}. The aof.py tool takes a valid APK and checks for a valid classes.dex file. Depending on what settings the user applies, the aof.py tool will look though the classes.dex file looking for the following obfuscations:
+\begin{description}[leftmargin=*,labelindent=1cm]
+\item[Source File IDX Obfuscation] \hfill \\
+Looks in the class header definitions for the source\_file\_idx field and checks to see if it was set to an invalid ID.
+\item[Removal of the BuildConfig Class] \hfill \\
+Looks in the strings section of the classes.dex file for any reference to BuildConfig.
+\item[Removal of Annotations] \hfill \\
+Looks in the class header definitions for the annotations\_off field and checks to see if it was set to zero.
+\item[Removal of Debug Information] \hfill \\
+Looks in each class header definitions for any debug information.
+\item[Class Name Obfuscation] \hfill \\
+Looks in the strings section of the classes.dex file for any strings that match any of these patterns, 'Lcom/package/[A-Z]', 'L[a-z]' or 'L[A-Z]'.
+\item[Variable Name Obfuscation] \hfill \\
+Looks in the strings section of the classed.dex file for any strings that match any of these patterns, '[a-z]' or '[A-Z]'.
+\item[Removal of Positions and Locals] \hfill \\
+Looks in every method for the offset to the location of the positions and locals information, if set to zero then no positions or locals for that method were defined.
+\item[String Encryption] \hfill \\
+Looks in the strings section of the classes.dex file and for every string it will count the non-printable characters, and compare it to the total string size. If there are more that 20\% of non-printable characters it is assumed that the string has been encrypted.
+\end{description}
+The aof.py tool checks these obfuscations to develop an educated guess on which obfuscator (Proguard, Java Archive Grinder, Zelix KlassMaster, or Allatori) was most likely used. This guess is displayed as a percentage of how many of the obfuscations matched to those that were discovered. While developing the aof.py tool, it was tested against the simple Android application that was developed and several Android applications that were downloaded from the Google Play store. Table \ref{fig:tsaa} shows the resulting output of the aof.py tool examining the simple Android application that was written. The full results is located in Appendix \ref{app:saaresults}.\\\\
+\begin{table}[H]
+\centering
+\begin{tabular}{| r | c | c | c | c |}
+\hline
+ & Proguard & JARG & KlassMaster & Allatori \\
+\hline
+proguard.apk & \textbf{99.99\%} & 87.49\% & 62.49\% & 24.99\% \\
+\hline
+jarg.apk & 87.49\% & \textbf{99.99\%} & 49.99\% & 12.49\% \\
+\hline
+klassmaster.apk & 74.99\% & 62.49\% & \textbf{99.99\%} & 37.49\% \\
+\hline
+allatori.apk & 24.99\% & 12.49\% & 37.49\% & \textbf{99.99\%} \\
+\hline
+\end{tabular}
+\caption{Summary of Results From the aof.py Tool When Ran Against the Simple Android Application \label{fig:tsaa}}
+\end{table}
+From aof.py it shows that for every one of the obfuscated Android applications, that they matched to their corresponding obfuscator 99.99\%. In addition the obfuscated applications matched to the other obfuscators due to the overlapping fingerprints. Meaning that some of the obfuscators will match to the same obfuscation in the application, but not all of them. It is important to note that since several obfuscation methods can be done by hand, the aof.py tool will not report a 100\% match to any of the obfuscators, it will always be 99.99\%. Table \ref{fig:tgps} shows results from running the aof.py tool against Android applications from the Google Play Store. The full results is located in Appendix \ref{app:gpsresults}.\\\\
+\begin{table}[H]
+\centering
+\begin{tabular}{| r | c | c | c | c |}
+\hline
+ & Proguard & JARG & KlassMaster & Allatori \\
+\hline
+Google Chrome & 37.49\% & 24.99\% & 37.49\% & \textbf{74.99\%} \\
+\hline
+Calculator & 49.99\% & 37.49\% & 49.99\% & \textbf{62.49\%} \\
+\hline
+Facebook & 37.49\% & 24.99\% & 37.49\% & \textbf{74.99\%} \\
+\hline
+LED Flashlight & \textbf{62.49\%} & 49.99\% & \textbf{62.49\%} & \textbf{62.49\%} \\
+\hline
+Amazon Kindle & 24.99\% & 12.49\% & 37.49\% & \textbf{87.49\%} \\
+\hline
+Google My Business & 27.49\% & 24.99\% & 37.49\% & \textbf{87.49\%} \\
+\hline
+Instagram & 37.49\% & 24.99\% & 24.99\% & \textbf{74.99\%} \\
+\hline
+Netlfix & 37.49\% & 24.99\% & 24.99\% & \textbf{74.99\%} \\
+\hline
+Pandora Radio & 37.49\% & 24.99\% & 37.49\% & \textbf{87.49\%} \\
+\hline
+Clash of Clans & \textbf{62.49\%} & 49.99\% & 49.99\% & 49.99\% \\
+\hline
+\end{tabular}
+\caption{Summary of Results from the aof.py Tool When Ran Against the Android Applications from Google Play Store. \label{fig:tgps}}
+\end{table}
+The Google Chrome, Digitalchemy Calculator, Facebook, Amazon Kindle, Google My Business, Instagram, Netflix, and Pandora Radio applications all matched to the Allatori Obfuscator, the LED Flashlight application matched to every obfuscator except Java Archive Grinder, and the Clash of Clans application matched to only Proguard. This result was expected because out of all of the obfuscators, Allatori is the most developed and widely used. It is also important to note that none of the applications matched any of the obfuscators completely. This result was also expected. While it is not known at this point how any of the applications were obfuscated, it is assumed that all of them were. The obfuscation program used in each application can be predicted by the evidence of the obfuscation in the applications.
