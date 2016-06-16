@@ -7,7 +7,6 @@ Android Obfuscation Fingerprinter (aof) is a *nix tool that was written in Pytho
 * Removal of Annotations
 * Removal of Debug Information
 * Class Name Obfuscation
-* Class Name Obfuscation
 * Variable Name Obfuscation
 * Removal of Postions and Locals
 * String Encryption
